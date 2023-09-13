@@ -1,0 +1,12 @@
+@tailwind base;
+
+@layer base {
+    html {
+      
+    }
+ 
+    input::-ms-reveal,
+    input::-ms-clear {
+        display: none;
+    }
+}
