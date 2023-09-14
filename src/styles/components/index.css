@@ -1,7 +1,20 @@
 @tailwind components;
 
 @layer components {
-  .header_blend-layer{
-     transform: translateZ(0)
-  }
+    .header_blend-layer {
+        transform: translateZ(0);
+    }
+
+    .underlined {
+        text-decoration: none !important;
+        @apply relative whitespace-nowrap;
+    }
+
+    .underlined::after {
+        @apply absolute -bottom-1 left-0 block h-[2px] w-full origin-left mix-blend-difference scale-x-0 transition-all duration-[0.25s] content-[""];
+    }
+
+    .underlined:hover::after {
+        @apply scale-x-100 bg-white;
+    }
 }

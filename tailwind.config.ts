@@ -23,6 +23,9 @@ const config: Config = {
             sans: ['var(--font-inter)', ...fontFamily.sans],
             mono: ['Roboto Mono', 'monospace'],
         },
+        borderRadius: {
+            '4xl': '2rem',
+        },
         backgroundImage: {
             'gradient-primary':
                 'radial-gradient(162.05% 170% at 109.58% 35%, #667593 0%, #E3E3E3 100%)',

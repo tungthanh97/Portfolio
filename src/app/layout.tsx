@@ -1,4 +1,4 @@
-import NavBar from '@components/NavBar';
+import PageHeader from '@components/Header';
 import classNames from '@lib/classNames';
 import '@styles/global.css';
 import type { Metadata } from 'next';
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en">
             <body className={classNames(calFont.className, inter.className)}>
-                <NavBar />
+                <PageHeader />
                 {children}
             </body>
         </html>

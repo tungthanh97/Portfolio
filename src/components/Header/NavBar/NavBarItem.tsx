@@ -9,9 +9,9 @@ interface INavBarItemProps extends HTMLProps<HTMLLIElement> {
 const NavBarItem = forwardRef(
     ({ link, title, ...props }: INavBarItemProps, ref: LegacyRef<HTMLLIElement>) => {
         return (
-            <li className="flex -mx-2" ref={ref} {...props}>
+            <li className="-mx-2 flex" ref={ref} {...props}>
                 <Link
-                    className="cursor-pointer px-7 py-4 mix-blend-difference text-white"
+                    className="cursor-pointer px-7 py-4 text-white mix-blend-difference"
                     href={link}
                 >
                     {title}
