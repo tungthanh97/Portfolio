@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import NavBar from './NavBar';
+import RollingBox from './RollingBox/RollingBox';
 
 const PageHeader = () => {
     return (
@@ -16,14 +17,9 @@ const PageHeader = () => {
                 <button className="-m-2 ml-auto p-2 lg:hidden" aria-label="Open menu">
                     Menu
                 </button>
-                <Link
-                    className="rounded-4xl flex h-14 items-center justify-center bg-primary-700 px-8 uppercase text-white transition-all duration-200 ease-in-out hover:rounded-2xl"
-                    href="/login"
-                >
-                    Login
-                </Link>
+
+                <RollingBox />
             </div>
-            1
         </section>
     );
 };
