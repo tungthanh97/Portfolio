@@ -11,23 +11,27 @@
     }
 
     .underlined::after {
-        @apply absolute -bottom-1 left-0 block h-[2px] w-full origin-left mix-blend-difference scale-x-0 transition-all duration-[0.25s] content-[""];
+        @apply absolute -bottom-1 left-0 block h-[2px] w-full origin-left scale-x-0 mix-blend-difference transition-all duration-[0.25s] content-[""];
     }
 
     .underlined:hover::after {
         @apply scale-x-100 bg-white;
     }
 
-    .button-shadow{
-        box-shadow: 0 6px 0 rgba(32, 38, 47, 0.6),0 6px 20px rgba(0,0,0,0.6);
+    .button-shadow {
+        box-shadow:
+            0 6px 0 rgba(32, 38, 47, 0.6),
+            0 6px 20px rgba(0, 0, 0, 0.6);
         perspective: 300px;
     }
 
-    .button-shadow:hover{
-      transform: rotateX(30deg);
+    .button-shadow:hover {
+        transform: rotateX(30deg);
     }
 
-     .button-shadow:active{
-        box-shadow: 0 3px 0 rgba(20,40,70,.6),0 3px 6px rgba(0,0,0,0.7);
+    .button-shadow:active {
+        box-shadow:
+            0 3px 0 rgba(20, 40, 70, 0.6),
+            0 3px 6px rgba(0, 0, 0, 0.7);
     }
 }
