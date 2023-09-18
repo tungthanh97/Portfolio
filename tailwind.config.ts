@@ -9,26 +9,29 @@ const config: Config = {
             colors: {
                 primary: {
                     700: 'rgb(20 20 20)',
+                    blue: '#4831d4',
+                    green: '#ccf381',
                 },
             },
+            maxWidth: {
+                'screen-max': '1440px',
+            },
+            breakpoint: {
+                '2xl': '1440px',
+            },
+            borderRadius: {
+                '4xl': '2rem',
+            },
         },
-        maxWidth: {
-            'screen-max': '1440px',
-        },
-        breakpoint: {
-            '2xl': '1440px',
-        },
+
         fontFamily: {
             cal: ['var(--font-cal)', ...fontFamily.serif],
             sans: ['var(--font-inter)', ...fontFamily.sans],
             mono: ['Roboto Mono', 'monospace'],
         },
-        borderRadius: {
-            '4xl': '2rem',
-        },
+
         backgroundImage: {
-            'gradient-primary':
-                'radial-gradient(162.05% 170% at 109.58% 35%, #667593 0%, #E3E3E3 100%)',
+            'gradient-primary': 'linear-gradient(90deg, #4831d4 67%, #ccf381 33%);',
         },
     },
     plugins: [],

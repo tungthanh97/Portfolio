@@ -11,11 +11,11 @@
     }
 
     .underlined::after {
-        @apply absolute -bottom-1 left-0 block h-[2px] w-full origin-left scale-x-0 mix-blend-difference transition-all duration-[0.25s] content-[""];
+        @apply absolute -bottom-1 left-0 block h-[2px] w-full origin-left scale-x-0 transition-all duration-[0.25s] content-[""];
     }
 
     .underlined:hover::after {
-        @apply scale-x-100 bg-white;
+        @apply scale-x-100 bg-primary-green;
     }
 
     .button-shadow {

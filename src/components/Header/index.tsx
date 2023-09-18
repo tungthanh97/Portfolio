@@ -5,10 +5,10 @@ import { FULLNAME } from 'data/constants/common';
 
 const PageHeader = () => {
     return (
-        <section className="sticky top-4 z-50 mx-auto flex w-full px-4">
+        <section className="fixed top-4 z-50 mx-auto flex w-full px-4">
             <div className="flex w-full justify-between px-4 py-6">
-                <div className="relative flex items-center bg-white py-1 pl-[5vw]">
-                    <Link className="underlined text-2xl font-medium" href="/">
+                <div className="relative flex items-center  py-1 pl-[5vw]">
+                    <Link className="underlined text-primary-green text-2xl font-medium" href="/">
                         {FULLNAME}
                     </Link>
                 </div>

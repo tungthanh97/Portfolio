@@ -1,7 +1,7 @@
 .box {
     --size: 40px;
     --strip-size: 10px;
-    --strip-color: #ffee80;
+    --strip-color: #ccf381;
 
     width: var(--size);
     aspect-ratio: 1;
@@ -22,17 +22,17 @@
     width: var(--size);
     aspect-ratio: 1;
 
-    background-color: hsl(39, 100%, var(--opacity));
+    background-color: hsl(248, 65%, var(--opacity));
 
     transform-style: preserve-3d;
 }
 
 .face.front {
-    --opacity: 66%;
+    --opacity: 42%;
 }
 
 .face.bottom {
-    --opacity: 66%;
+    --opacity: 42%;
 
     top: 100%;
 
@@ -41,10 +41,8 @@
 }
 
 .face.top {
-    --opacity: 74%;
+    --opacity: 52%;
     bottom: 100%;
-
-    background-color: unset;
 
     transform-origin: bottom;
     transform: rotateX(90deg);
@@ -56,7 +54,7 @@
 .top-left,
 .top-right {
     position: relative;
-    background-color: hsl(39, 100%, var(--opacity));
+    background-color: hsl(248, 65%, var(--opacity));
 }
 
 .top-left::after,
@@ -97,7 +95,7 @@
 }
 
 .face.back {
-    --opacity: 78%;
+    --opacity: 52%;
     bottom: 200%;
 
     transform-origin: center 60px -20px;
@@ -105,7 +103,7 @@
 }
 
 .face.right {
-    --opacity: 70%;
+    --opacity: 48%;
 
     left: 100%;
 
@@ -114,7 +112,7 @@
 }
 
 .face.left {
-    --opacity: 70%;
+    --opacity: 48%;
 
     right: 100%;
 
