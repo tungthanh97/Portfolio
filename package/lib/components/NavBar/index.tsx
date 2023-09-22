@@ -1,28 +1,10 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import NavBarItem from './NavBarItem';
+import { INavBarItem } from '@package/lib/types/components';
 
-const navBarContent = Object.freeze([
-    {
-        title: 'Home',
-        link: '/',
-    },
-    {
-        title: 'Projects',
-        link: '/projects',
-    },
-    {
-        title: 'Blog',
-        link: '/blog',
-    },
-    {
-        title: 'Articles',
-        link: '/articles',
-    },
-]);
-
-const NavBar = (): JSX.Element => {
+const NavBar = ({ navBarContent }: { navBarContent: INavBarItem[] }): JSX.Element => {
     const [selectedNavIndex, setSelectedNavIndex] = useState<number | null>(null);
     const navRef = useRef<HTMLElement>(null);
 
@@ -58,7 +40,7 @@ const NavBar = (): JSX.Element => {
 
     return (
         <nav ref={navRef} className="rounded-4lx hidden lg:block lg:py-0">
-            <div className="font-matter rounded-4xl relative z-20 m-1 border-[3px] border-primary-700 bg-white  uppercase">
+            <div className="font-matter relative z-20 m-1 rounded-4xl border-[3px] border-primary-700 bg-white  uppercase">
                 <ul
                     id="nav-items"
                     data-orientation="horizontal"
@@ -67,7 +49,7 @@ const NavBar = (): JSX.Element => {
                     <div
                         id="animation"
                         style={animationStyle}
-                        className="rounded-4xl absolute -z-10 border-2 bg-primary-700 opacity-0 transition-all duration-500 ease-in-out focus:opacity-100 group-hover:opacity-100 group-focus:opacity-100"
+                        className="absolute -z-10 rounded-4xl border-2 bg-primary-700 opacity-0 transition-all duration-500 ease-in-out focus:opacity-100 group-hover:opacity-100 group-focus:opacity-100"
                     />
                     {navBarContent.map((item, index) => (
                         <NavBarItem

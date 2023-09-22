@@ -1,6 +1,10 @@
 @tailwind components;
 
 @layer components {
+    .center-row {
+        @apply flex flex-row justify-center items-center;
+    }
+
     .header_blend-layer {
         transform: translateZ(0);
     }

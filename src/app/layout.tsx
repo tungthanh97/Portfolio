@@ -1,5 +1,5 @@
 import PageHeader from '@components/Header';
-import classNames from '@lib/classNames';
+import classNames from '@package/lib/utils/classNames';
 import '@styles/global.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
