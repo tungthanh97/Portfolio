@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 
-const inter = Inter({
+const interFont = Inter({
     subsets: ['latin'],
     variable: '--font-inter',
     preload: true,
@@ -19,6 +19,13 @@ const calFont = localFont({
     display: 'swap',
 });
 
+const quantumFont = localFont({
+    src: '../../fonts/Quantum_regular.otf',
+    variable: '--font-quant',
+    preload: true,
+    display: 'swap',
+});
+
 export const metadata: Metadata = {
     title: 'Tom Portfolio',
     description: 'Portfolio created by Tom',
@@ -27,11 +34,19 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
+            {/* <style global>{`
+                html {
+                    --font-quant:${quantumFont.className};
+                    --font-cal:${calFont.className};
+                    --font-inter:${interFont.className};
+                }
+            `}</style> */}
             <body
                 className={classNames(
-                    calFont.className,
-                    inter.className,
-                    'bg-white dark:bg-gray-900'
+                    'bg-white dark:bg-gray-900',
+                    interFont.variable,
+                    quantumFont.variable,
+                    calFont.variable
                 )}
             >
                 <PageHeader />

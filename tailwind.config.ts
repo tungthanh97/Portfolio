@@ -26,11 +26,20 @@ const config: Config = {
             borderRadius: {
                 '4xl': '2rem',
             },
+
+            lineHeight: {
+                standard: '144%',
+            },
+
+            fontSize: {
+                standard: '22px',
+            },
         },
 
         fontFamily: {
             cal: ['var(--font-cal)', ...fontFamily.serif],
             sans: ['var(--font-inter)', ...fontFamily.sans],
+            quantum: ['var(--font-quant)'],
             mono: ['Roboto Mono', 'monospace'],
         },
 

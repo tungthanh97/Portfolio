@@ -19,7 +19,7 @@
     }
 
     .underlined:hover::after {
-        @apply scale-x-100 bg-primary-green;
+        @apply scale-x-100 bg-current;
     }
 
     .button-shadow {
