@@ -1,8 +1,8 @@
-import { INavBarItem } from '@package/lib/types/components';
+import { ILinkItem } from '@package/lib/types/common';
 
 export const navBarContent = Object.freeze([
     {
-        title: 'Home',
+        title: 'About',
         link: '/',
     },
     {
@@ -14,7 +14,7 @@ export const navBarContent = Object.freeze([
         link: '/blog',
     },
     {
-        title: 'Articles',
-        link: '/articles',
+        title: 'Contact',
+        link: '/contact',
     },
-]) as INavBarItem[];
+]) as ILinkItem[];

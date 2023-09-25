@@ -8,13 +8,18 @@ const config: Config = {
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
         './package/lib/components/**/*.{js,ts,jsx,tsx,mdx}',
     ],
+    darkMode: 'class',
     theme: {
         extend: {
             colors: {
                 primary: {
-                    700: 'rgb(20 20 20)',
                     blue: '#4831d4',
                     green: '#ccf381',
+                    black: '#151417',
+                },
+                custom: {
+                    primary: 'var(--color-primary)',
+                    secondary: 'var(--color-secondary)',
                 },
             },
             maxWidth: {

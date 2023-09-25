@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { HTMLProps, LegacyRef, forwardRef } from 'react';
 
-interface INavBarItemProps extends HTMLProps<HTMLLIElement> {
+interface ILinkItemProps extends HTMLProps<HTMLLIElement> {
     link: string;
     title: string;
 }
 
 const NavBarItem = forwardRef(
-    ({ link, title, ...props }: INavBarItemProps, ref: LegacyRef<HTMLLIElement>) => {
+    ({ link, title, ...props }: ILinkItemProps, ref: LegacyRef<HTMLLIElement>) => {
         return (
             <li className="-mx-2 flex" ref={ref} {...props}>
                 <Link

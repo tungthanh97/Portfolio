@@ -9,17 +9,18 @@ import MenuToggle from '@package/lib/components/MenuToggle';
 import { navBarContent } from 'data/constants/navigationItems';
 import Logo from '@package/lib/components/Logo';
 import { useState } from 'react';
+import { useTheme } from 'providers/ThemeProvider';
 
 const PageHeader = () => {
     const [isMenuOpenned, setIsMenuOpenned] = useState(false);
+    const { toggleTheme } = useTheme();
 
     return (
-        <section className="fixed top-4 z-50 mx-auto flex w-full px-4">
+        <section className="absolute top-4 z-50 mx-auto flex w-full px-4">
             <div className="flex w-full justify-between px-4 py-6">
                 <div
                     className={classNames(
-                        'relative z-[99999] flex items-center py-1 pl-[5vw] text-primary-green',
-                        isMenuOpenned && 'text-primary-blue'
+                        'text-custom-primary relative z-[99999] flex items-center py-1 pl-[5vw]'
                     )}
                 >
                     <Logo />
@@ -37,7 +38,7 @@ const PageHeader = () => {
                 </div>
 
                 <div className={classNames('lg:center-row hidden h-full')}>
-                    <RollingBox />
+                    <RollingBox onClick={() => toggleTheme()} />
                 </div>
             </div>
         </section>

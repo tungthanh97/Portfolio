@@ -4,6 +4,8 @@ import '@styles/global.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
+import Providers from 'providers';
+import { Suspense } from 'react';
 
 const interFont = Inter({
     subsets: ['latin'],
@@ -33,25 +35,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
-            {/* <style global>{`
-                html {
-                    --font-quant:${quantumFont.className};
-                    --font-cal:${calFont.className};
-                    --font-inter:${interFont.className};
-                }
-            `}</style> */}
-            <body
-                className={classNames(
-                    'bg-white dark:bg-gray-900',
-                    interFont.variable,
-                    quantumFont.variable,
-                    calFont.variable
-                )}
-            >
-                <PageHeader />
-                {children}
-            </body>
-        </html>
+        <Providers>
+            <html lang="en">
+                <body
+                    className={classNames(
+                        'relative bg-primary-black',
+                        interFont.variable,
+                        quantumFont.variable,
+                        calFont.variable
+                    )}
+                >
+                    <Suspense>
+                        <PageHeader />
+                        {children}
+                    </Suspense>
+                </body>
+            </html>
+        </Providers>
     );
 }

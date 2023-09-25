@@ -1,13 +1,13 @@
 'use client';
 
-import { INavBarItem } from '@package/lib/types/components';
+import { ILinkItem } from '@package/lib/types/common';
 import classNames from '@package/lib/utils/classNames';
 import Link from 'next/link';
 import { useState } from 'react';
 import Logo from '../Logo';
 
 export interface IMenuToggle {
-    navBarContent: INavBarItem[];
+    navBarContent: ILinkItem[];
     isShown: boolean;
     toggleMenu: () => void;
 }
@@ -16,8 +16,7 @@ const MenuToggle = ({ navBarContent, isShown, toggleMenu }: IMenuToggle) => {
     return (
         <button
             className={classNames(
-                'relative z-50 flex h-5 w-7 lg:hidden [&>span]:bg-primary-green [&>span]:transition-all',
-                isShown && '[&>span]:bg-primary-blue'
+                '[&>span]:bg-custom-primary relative z-50 flex h-5 w-7 lg:hidden [&>span]:transition-all'
             )}
             onClick={() => toggleMenu()}
         >
@@ -42,13 +41,13 @@ const MenuToggle = ({ navBarContent, isShown, toggleMenu }: IMenuToggle) => {
 
             <div
                 className={classNames(
-                    'fixed inset-0 flex max-h-full w-full flex-col items-center justify-start bg-white pt-24 opacity-100 transition-opacity duration-300',
+                    'fixed inset-0 flex max-h-full w-full flex-col items-center justify-start bg-white pt-24 opacity-100 transition-opacity duration-300 dark:bg-primary-black',
                     !isShown && 'max-h-0 opacity-0'
                 )}
             >
                 <ul
                     className={classNames(
-                        'text-primary blue auto-flow-y-auto text-standard flex max-h-full w-full flex-col items-start border-t-2 border-primary-blue font-bold opacity-100',
+                        'text-primary blue auto-flow-y-auto border-custom-primary flex max-h-full w-full flex-col items-start border-t-2 text-standard font-bold opacity-100',
                         !isShown && 'max-h-0 opacity-0'
                     )}
                 >
@@ -56,7 +55,7 @@ const MenuToggle = ({ navBarContent, isShown, toggleMenu }: IMenuToggle) => {
                         navBarContent.map((item) => (
                             <Link
                                 href={item.link}
-                                className="leading-standard w-full border-b-2 border-dashed border-primary-blue p-4 text-left text-primary-blue hover:bg-primary-blue hover:text-primary-green hover:opacity-70 md:px-6"
+                                className="border-custom-primary text-custom-primary hover:text-custom-secondary w-full border-b-2 border-dashed p-4 text-left leading-standard hover:bg-primary-blue hover:opacity-70 md:px-6"
                             >
                                 {item.title}
                             </Link>

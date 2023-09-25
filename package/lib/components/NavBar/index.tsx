@@ -2,9 +2,9 @@
 
 import { useMemo, useRef, useState } from 'react';
 import NavBarItem from './NavBarItem';
-import { INavBarItem } from '@package/lib/types/components';
+import { ILinkItem } from '@package/lib/types/common';
 
-const NavBar = ({ navBarContent }: { navBarContent: INavBarItem[] }): JSX.Element => {
+const NavBar = ({ navBarContent }: { navBarContent: ILinkItem[] }): JSX.Element => {
     const [selectedNavIndex, setSelectedNavIndex] = useState<number | null>(null);
     const navRef = useRef<HTMLElement>(null);
 
@@ -40,7 +40,7 @@ const NavBar = ({ navBarContent }: { navBarContent: INavBarItem[] }): JSX.Elemen
 
     return (
         <nav ref={navRef} className="rounded-4lx hidden lg:block lg:py-0">
-            <div className="font-matter relative z-20 m-1 rounded-4xl border-[3px] border-primary-700 bg-white  uppercase">
+            <div className="font-matter relative z-20 m-1 rounded-4xl border-[3px] border-primary-black bg-white  uppercase">
                 <ul
                     id="nav-items"
                     data-orientation="horizontal"
@@ -49,7 +49,7 @@ const NavBar = ({ navBarContent }: { navBarContent: INavBarItem[] }): JSX.Elemen
                     <div
                         id="animation"
                         style={animationStyle}
-                        className="absolute -z-10 rounded-4xl border-2 bg-primary-700 opacity-0 transition-all duration-500 ease-in-out focus:opacity-100 group-hover:opacity-100 group-focus:opacity-100"
+                        className="absolute -z-10 rounded-4xl border-2 bg-primary-black opacity-0 transition-all duration-500 ease-in-out focus:opacity-100 group-hover:opacity-100 group-focus:opacity-100"
                     />
                     {navBarContent.map((item, index) => (
                         <NavBarItem

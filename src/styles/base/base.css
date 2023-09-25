@@ -1,10 +1,23 @@
 @tailwind base;
 
 @layer base {
-    html {
-      
+    :root {
+        --color-primary: #4831d4;
+        --color-secondary: #ccf381;
     }
- 
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --color-primary: #ccf381;
+            --color-secondary: #4831d4;
+        }
+    }
+
+    :root[class='dark'] {
+        --color-primary: #ccf381;
+        --color-secondary: #4831d4;
+    }
+
     input::-ms-reveal,
     input::-ms-clear {
         display: none;
