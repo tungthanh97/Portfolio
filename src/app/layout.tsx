@@ -31,6 +31,8 @@ const quantumFont = localFont({
 export const metadata: Metadata = {
     title: 'Tom Portfolio',
     description: 'Portfolio created by Tom',
+    creator: 'Tom',
+    icons: { icon: '/favicon.ico' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
