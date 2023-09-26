@@ -16,7 +16,7 @@ const MenuToggle = ({ navBarContent, isShown, toggleMenu }: IMenuToggle) => {
     return (
         <button
             className={classNames(
-                '[&>span]:bg-custom-primary relative z-50 flex h-5 w-7 lg:hidden [&>span]:transition-all'
+                'relative z-50 flex h-5 w-7 lg:hidden [&>span]:bg-custom-primary [&>span]:transition-all'
             )}
             onClick={() => toggleMenu()}
         >
@@ -41,13 +41,13 @@ const MenuToggle = ({ navBarContent, isShown, toggleMenu }: IMenuToggle) => {
 
             <div
                 className={classNames(
-                    'fixed inset-0 flex max-h-full w-full flex-col items-center justify-start bg-white pt-24 opacity-100 transition-opacity duration-300 dark:bg-primary-black',
+                    'bg-primary-white fixed inset-0 flex max-h-full w-full flex-col items-center justify-start pt-24 opacity-100 transition-opacity duration-300 dark:bg-primary-black',
                     !isShown && 'max-h-0 opacity-0'
                 )}
             >
                 <ul
                     className={classNames(
-                        'text-primary blue auto-flow-y-auto border-custom-primary flex max-h-full w-full flex-col items-start border-t-2 text-standard font-bold opacity-100',
+                        'text-primary blue auto-flow-y-auto flex max-h-full w-full flex-col items-start border-t-2 border-custom-primary text-standard font-bold opacity-100',
                         !isShown && 'max-h-0 opacity-0'
                     )}
                 >
@@ -55,7 +55,7 @@ const MenuToggle = ({ navBarContent, isShown, toggleMenu }: IMenuToggle) => {
                         navBarContent.map((item) => (
                             <Link
                                 href={item.link}
-                                className="border-custom-primary text-custom-primary hover:text-custom-secondary w-full border-b-2 border-dashed p-4 text-left leading-standard hover:bg-primary-blue hover:opacity-70 md:px-6"
+                                className="w-full border-b-2 border-dashed border-custom-primary p-4 text-left leading-standard text-custom-primary hover:bg-primary-blue hover:text-custom-secondary hover:opacity-70 md:px-6"
                             >
                                 {item.title}
                             </Link>

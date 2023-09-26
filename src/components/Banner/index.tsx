@@ -1,6 +1,3 @@
-import Image from 'next/image';
-import AvatarBackground from './AvatarBackground';
-import Contact from '@components/Contact';
 import Avatar from './Avatar';
 
 const Banner = () => {
@@ -20,9 +17,6 @@ const Banner = () => {
             </div>
             <div className="bg-primary-white flex items-center justify-center p-36 dark:bg-primary-black lg:hidden">
                 <Avatar wrapperClassName="h-max w-max" />
-            </div>
-            <div className="center-row fixed bottom-4 z-50 w-full">
-                <Contact />
             </div>
         </section>
     );

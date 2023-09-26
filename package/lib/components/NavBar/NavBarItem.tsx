@@ -11,7 +11,7 @@ const NavBarItem = forwardRef(
         return (
             <li className="-mx-2 flex" ref={ref} {...props}>
                 <Link
-                    className="cursor-pointer px-7 py-4 text-white mix-blend-difference "
+                    className="cursor-pointer px-7 py-4 font-sans text-white mix-blend-difference"
                     href={link}
                 >
                     {title}

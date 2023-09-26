@@ -7,9 +7,9 @@ import localFont from 'next/font/local';
 import Providers from 'providers';
 import { Suspense } from 'react';
 
-const interFont = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter',
+const bioFont = localFont({
+    src: '../../fonts/Biotif.ttf',
+    variable: '--font-bio',
     preload: true,
     display: 'swap',
 });
@@ -39,8 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <html lang="en">
                 <body
                     className={classNames(
-                        'relative bg-primary-black',
-                        interFont.variable,
+                        'bg-primary-white relative dark:bg-primary-black',
+                        bioFont.variable,
                         quantumFont.variable,
                         calFont.variable
                     )}

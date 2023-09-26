@@ -4,25 +4,43 @@
     :root {
         --color-primary: rgb(72, 49, 212);
         --color-secondary: rgb(204, 243, 129);
-        --color-primary-hs: 248,65%; 
+        --color-primary-hs: 248, 65%;
     }
 
     @media (prefers-color-scheme: dark) {
         :root {
             --color-primary: rgb(204, 243, 129);
             --color-secondary: rgb(72, 49, 212);
-            --color-primary-hs: 81,83%;
+            --color-primary-hs: 81, 83%;
         }
     }
 
     :root[class='dark'] {
         --color-primary: rgb(204, 243, 129);
         --color-secondary: rgb(72, 49, 212);
-        --color-primary-hs: 81,83%;
+        --color-primary-hs: 81, 83%;
     }
 
     input::-ms-reveal,
     input::-ms-clear {
         display: none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #ffffff;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-primary);
+        border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #cfd2d2;
+        border-bottom-color: #cfd2d2;
     }
 }

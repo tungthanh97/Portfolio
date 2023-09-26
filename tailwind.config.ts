@@ -16,6 +16,7 @@ const config: Config = {
                     blue: '#4831d4',
                     green: '#ccf381',
                     black: '#151417',
+                    white: '#ffffff',
                 },
                 custom: {
                     primary: 'var(--color-primary)',
@@ -47,7 +48,7 @@ const config: Config = {
 
         fontFamily: {
             cal: ['var(--font-cal)', ...fontFamily.serif],
-            sans: ['var(--font-inter)', ...fontFamily.sans],
+            sans: ['var(--font-bio)', ...fontFamily.sans],
             quantum: ['var(--font-quant)'],
             mono: ['Roboto Mono', 'monospace'],
         },

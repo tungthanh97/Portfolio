@@ -40,7 +40,7 @@ const NavBar = ({ navBarContent }: { navBarContent: ILinkItem[] }): JSX.Element 
 
     return (
         <nav ref={navRef} className="rounded-4lx hidden lg:block lg:py-0">
-            <div className="font-matter dark:border-grey-100 relative z-20 m-1 rounded-4xl border-[3px] border-primary-black bg-white uppercase dark:bg-primary-black">
+            <div className="font-matter dark:border-grey-100 bg-primary-white relative z-20 m-1 rounded-4xl border-[3px] border-primary-black uppercase dark:bg-primary-black">
                 <ul
                     id="nav-items"
                     data-orientation="horizontal"
@@ -53,6 +53,7 @@ const NavBar = ({ navBarContent }: { navBarContent: ILinkItem[] }): JSX.Element 
                     />
                     {navBarContent.map((item, index) => (
                         <NavBarItem
+                            key={item.title}
                             link={item.link}
                             title={item.title}
                             onMouseEnter={() => handleSelectNavItem(index)}
