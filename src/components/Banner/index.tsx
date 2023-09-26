@@ -7,7 +7,7 @@ const Banner = () => {
             <div className="center-row h-full bg-white dark:bg-primary-black">
                 <div className="my-[20vh] flex h-max w-full items-center justify-evenly lg:my-60 lg:h-screen">
                     <article className="lg:max-w-[30vw]">
-                        <h1 className="text-custom-primary pr-4 text-7xl">Frontend Developer.</h1>
+                        <h1 className="pr-4 text-7xl text-custom-primary">Frontend Developer.</h1>
                         <p className="my-6 text-xl leading-relaxed text-white mix-blend-difference">
                             I like to craft solid and scalable frontend products with great user
                             experiences.
@@ -17,7 +17,7 @@ const Banner = () => {
                         <div className="absolute -right-36 -top-1/4 max-w-max">
                             <AvatarBackground className="fill-custom-primary" />
                         </div>
-                        <picture className="relative z-10 block h-96 w-96 border border-primary-black bg-blend-difference dark:border-white">
+                        <picture className="dark:border-grey-100 relative z-10 block h-96 w-96 border border-primary-black bg-blend-difference">
                             <Image
                                 alt="My avatar"
                                 src="/images/avatar.png"
@@ -40,7 +40,7 @@ const Banner = () => {
                         height={935}
                         className="absolute -right-36 -top-1/4 max-w-max"
                     /> */}
-                    <picture className="relative z-10 block h-96 w-96 border border-primary-black bg-blend-difference dark:border-white">
+                    <picture className="dark:border-grey-100 relative z-10 block h-96 w-96 border border-primary-black bg-blend-difference ">
                         <Image
                             alt="My avatar"
                             src="/images/avatar.png"

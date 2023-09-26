@@ -2,20 +2,23 @@
 
 @layer base {
     :root {
-        --color-primary: #4831d4;
-        --color-secondary: #ccf381;
+        --color-primary: rgb(72, 49, 212);
+        --color-secondary: rgb(204, 243, 129);
+        --color-primary-hs: 248,65%; 
     }
 
     @media (prefers-color-scheme: dark) {
         :root {
-            --color-primary: #ccf381;
-            --color-secondary: #4831d4;
+            --color-primary: rgb(204, 243, 129);
+            --color-secondary: rgb(72, 49, 212);
+            --color-primary-hs: 81,83%;
         }
     }
 
     :root[class='dark'] {
-        --color-primary: #ccf381;
-        --color-secondary: #4831d4;
+        --color-primary: rgb(204, 243, 129);
+        --color-secondary: rgb(72, 49, 212);
+        --color-primary-hs: 81,83%;
     }
 
     input::-ms-reveal,

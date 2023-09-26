@@ -19,6 +19,8 @@ const useDarkTheme = (defaultTheme = 'dark') => {
         } else {
             document.documentElement.classList.remove('dark');
         }
+
+        if (typeof window !== 'undefined') localStorage.setItem('color-theme', theme);
     }, [theme]);
 
     return [theme, toggleTheme] as const;
@@ -26,9 +28,10 @@ const useDarkTheme = (defaultTheme = 'dark') => {
 
 const getInitColorMode = () => {
     const isDarkMode =
-        localStorage.getItem('color-theme') === 'dark' ||
-        (!('color-theme' in localStorage) &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches);
+        typeof window !== 'undefined' &&
+        (localStorage.getItem('color-theme') === 'dark' ||
+            (!('color-theme' in localStorage) &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches));
 
     return isDarkMode ? 'dark' : 'light';
 };

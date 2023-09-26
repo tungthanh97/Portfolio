@@ -21,6 +21,10 @@ const config: Config = {
                     primary: 'var(--color-primary)',
                     secondary: 'var(--color-secondary)',
                 },
+                grey: {
+                    100: '#e5e7eb',
+                    900: '#1F2124',
+                },
             },
             maxWidth: {
                 'screen-max': '1440px',
