@@ -2,35 +2,32 @@
 
 @layer base {
     :root {
-        --color-primary: rgb(72, 49, 212);
-        --color-secondary: rgb(204, 243, 129);
+        --color-primary: 72, 49, 212;
+        --color-secondary: 204, 243, 129;
         --color-primary-hs: 248, 65%;
 
-        --color-bkg: rgb(255, 255, 255);
-        --color-inverted: rgb(21, 20, 23);
-        --color-inverted-rgb: 21, 20, 23;
+        --color-bkg: 255, 255, 255;
+        --color-inverted: 21, 20, 23;
     }
 
     @media (prefers-color-scheme: dark) {
         :root {
-            --color-primary: rgb(204, 243, 129);
-            --color-secondary: rgb(72, 49, 212);
+            --color-primary: 204, 243, 129;
+            --color-secondary: 72, 49, 212;
             --color-primary-hs: 81, 83%;
 
-            --color-bkg: rgb(21, 20, 23);
-            --color-inverted: rgb(255, 255, 255);
-            --color-inverted-rgb: 255, 255, 255;
+            --color-bkg: 21, 20, 23;
+            --color-inverted: 255, 255, 255;
         }
     }
 
     :root[class='dark'] {
-        --color-primary: rgb(204, 243, 129);
-        --color-secondary: rgb(72, 49, 212);
+        --color-primary: 204, 243, 129;
+        --color-secondary: 72, 49, 212;
         --color-primary-hs: 81, 83%;
 
-        --color-bkg: rgb(21, 20, 23);
-        --color-inverted: rgb(255, 255, 255);
-        --color-inverted-rgb: 255, 255, 255;
+        --color-bkg: 21, 20, 23;
+        --color-inverted: 255, 255, 255;
     }
 
     input::-ms-reveal,

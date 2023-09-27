@@ -19,8 +19,8 @@ const config: Config = {
                     white: '#ffffff',
                 },
                 custom: {
-                    primary: 'var(--color-primary)',
-                    secondary: 'var(--color-secondary)',
+                    primary: 'rgba(var(--color-primary), <alpha-value>)',
+                    secondary: 'rgba(var(--color-secondary), <alpha-value>)',
                 },
                 grey: {
                     100: '#e5e7eb',

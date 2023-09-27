@@ -1,9 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import NavBar from '@package/lib/components/NavBar';
-import RollingBox from '@package/lib/components/RollingBox/RollingBox';
-import { FULLNAME } from 'data/constants/common';
+import RollingBox from '@components/RollingBox/RollingBox';
 import classNames from '@package/lib/utils/classNames';
 import MenuToggle from '@package/lib/components/MenuToggle';
 import { navBarContent } from 'data/constants/navigationItems';

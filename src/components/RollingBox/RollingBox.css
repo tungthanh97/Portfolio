@@ -1,7 +1,7 @@
 .box {
     --size: 40px;
     --strip-size: 10px;
-    --strip-color: var(--color-secondary);
+    --strip-color: rgb(var(--color-secondary));
 
     width: var(--size);
     aspect-ratio: 1;
