@@ -5,6 +5,10 @@
         --color-primary: rgb(72, 49, 212);
         --color-secondary: rgb(204, 243, 129);
         --color-primary-hs: 248, 65%;
+
+        --color-bkg: rgb(255, 255, 255);
+        --color-inverted: rgb(21, 20, 23);
+        --color-inverted-rgb: 21, 20, 23;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -12,6 +16,10 @@
             --color-primary: rgb(204, 243, 129);
             --color-secondary: rgb(72, 49, 212);
             --color-primary-hs: 81, 83%;
+
+            --color-bkg: rgb(21, 20, 23);
+            --color-inverted: rgb(255, 255, 255);
+            --color-inverted-rgb: 255, 255, 255;
         }
     }
 
@@ -19,6 +27,10 @@
         --color-primary: rgb(204, 243, 129);
         --color-secondary: rgb(72, 49, 212);
         --color-primary-hs: 81, 83%;
+
+        --color-bkg: rgb(21, 20, 23);
+        --color-inverted: rgb(255, 255, 255);
+        --color-inverted-rgb: 255, 255, 255;
     }
 
     input::-ms-reveal,

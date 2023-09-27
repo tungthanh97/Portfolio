@@ -38,4 +38,9 @@
             0 3px 0 rgba(20, 40, 70, 0.6),
             0 3px 6px rgba(0, 0, 0, 0.7);
     }
+
+    .glass{
+        background:linear-gradient(360deg, rgba(var(--color-inverted-rgb), 0.1), rgba(var(--color-inverted-rgb), 0));
+        @apply backdrop-blur-md bg-opacity-60 rounded-lg;
+    }
 }
