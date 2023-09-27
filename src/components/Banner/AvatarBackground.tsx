@@ -7,11 +7,12 @@ const AvatarBackground = ({
 }) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="910"
-        height="701"
+        width="800"
+        height="620"
         viewBox="0 0 910 701"
         id="avatar-shapes"
         data-shape="true"
+        preserveAspectRatio="none"
         className={className}
     >
         <path

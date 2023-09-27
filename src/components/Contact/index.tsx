@@ -1,11 +1,29 @@
+'use client';
+
+import classNames from '@package/lib/utils/classNames';
 import contactItems from 'data/constants/contactItems';
+import useScrollDirection from 'hooks/useScrollDirection';
+import { useState } from 'react';
 
 const Contact = () => {
+    const [isScrollUp, setIsScrollUp] = useState(false);
+
+    useScrollDirection({
+        onScrollUp: () => setIsScrollUp(true),
+        onScrollDown: () => setIsScrollUp(false),
+    });
+
     return (
-        <div className="center-row glass fixed bottom-0 z-50 w-screen pb-1">
-            <nav className="center-row  cursor-pointer gap-5 p-2">
+        <div
+            className={classNames(
+                'center-row glass fixed bottom-0 z-50 w-screen pb-1 opacity-100',
+                isScrollUp && 'opacity-60 hover:opacity-100'
+            )}
+        >
+            <nav className="center-row cursor-pointer gap-5 p-2">
                 {contactItems.map((item) => (
                     <a
+                        key={item.title}
                         href={item.link}
                         className="group font-sans text-custom-primary filter hover:brightness-110"
                     >
