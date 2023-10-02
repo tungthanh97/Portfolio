@@ -1,35 +1,8 @@
 @tailwind base;
 
+@import "./theme.css";
+
 @layer base {
-    :root {
-        --color-primary: 72, 49, 212;
-        --color-secondary: 204, 243, 129;
-        --color-primary-hs: 248, 65%;
-
-        --color-bkg: 255, 255, 255;
-        --color-inverted: 21, 20, 23;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --color-primary: 204, 243, 129;
-            --color-secondary: 72, 49, 212;
-            --color-primary-hs: 81, 83%;
-
-            --color-bkg: 21, 20, 23;
-            --color-inverted: 255, 255, 255;
-        }
-    }
-
-    :root[class='dark'] {
-        --color-primary: 204, 243, 129;
-        --color-secondary: 72, 49, 212;
-        --color-primary-hs: 81, 83%;
-
-        --color-bkg: 21, 20, 23;
-        --color-inverted: 255, 255, 255;
-    }
-
     * {
         box-sizing: border-box;
         padding: 0;
@@ -44,18 +17,4 @@
     ::-webkit-scrollbar {
         @apply hidden;
     }
-
-    /* ::-webkit-scrollbar-track {
-        background-color: #ffffff;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: var(--color-primary);
-        border-radius: 8px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: #cfd2d2;
-        border-bottom-color: #cfd2d2;
-    } */
 }
