@@ -1,8 +1,7 @@
-import type { Config } from 'tailwindcss'
-
 const { fontFamily } = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin');
 
-const config: Config = {
+const config = {
     content: [
         './src/components/**/*.{js,ts,jsx,tsx,mdx}',
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -21,6 +20,7 @@ const config: Config = {
                 custom: {
                     primary: 'rgba(var(--color-primary), <alpha-value>)',
                     secondary: 'rgba(var(--color-secondary), <alpha-value>)',
+                    background: 'rgba(var(--color-bkg), <alpha-value>)',
                 },
                 grey: {
                     100: '#e5e7eb',
@@ -65,7 +65,30 @@ const config: Config = {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        plugin(function ({ matchUtilities, theme }) {
+            matchUtilities(
+                {
+                    'translate-z': (value) => ({
+                        '--tw-translate-z': value,
+                        transform: `translate3d(var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z)) rotate(var(--tw-rotate)) rotateZ(var(--tw-rotate-z)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))`,
+                    }),
+                },
+                { values: theme('translate') }
+            );
+        }),
+        plugin(function ({ matchUtilities, theme }) {
+            matchUtilities(
+                {
+                    'rotate-z': (value) => ({
+                        '--tw-rotate-z': `${value}`,
+                        transform: `translate3d(var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z)) rotate(var(--tw-rotate)) rotateZ(var(--tw-rotate-z)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))`,
+                    }),
+                },
+                { values: theme('rotate') }
+            );
+        }),
+    ],
 };
 
-export default config
+export default config;

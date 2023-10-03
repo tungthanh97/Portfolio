@@ -1,6 +1,6 @@
 import './RollingBox.css';
 
-const RollingBox = ({ onClick }: { onClick: () => void }) => {
+const RollingBox = ({ onClick }: { onClick?: () => void }) => {
     return (
         <div
             onClick={onClick}

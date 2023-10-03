@@ -1,12 +1,19 @@
 @tailwind base;
 
-@import "./theme.css";
+@import './theme.css';
 
 @layer base {
     * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
+    }
+    
+    *,
+    ::after,
+    ::before {
+        --tw-translate-z: 0;
+        --tw-rotate-z: 0;
     }
 
     input::-ms-reveal,

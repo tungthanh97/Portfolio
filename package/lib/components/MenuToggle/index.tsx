@@ -41,7 +41,7 @@ const MenuToggle = ({ navBarContent, isShown, toggleMenu }: IMenuToggle) => {
 
             <div
                 className={classNames(
-                    'bg-primary-white fixed inset-0 flex max-h-full w-full flex-col items-center justify-start pt-24 opacity-100 transition-opacity duration-300 dark:bg-primary-black',
+                    'bg-custom-background fixed inset-0 flex max-h-full w-full flex-col items-center justify-start pt-24 opacity-100 transition-opacity duration-300 ',
                     !isShown && 'max-h-0 opacity-0'
                 )}
             >

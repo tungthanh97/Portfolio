@@ -40,7 +40,7 @@ const NavBar = ({ navBarContent }: { navBarContent: ILinkItem[] }): JSX.Element 
 
     return (
         <nav ref={navRef} className="rounded-4lx hidden lg:block lg:py-0">
-            <div className="font-matter dark:border-grey-100 bg-primary-white relative z-20 m-1 rounded-4xl border-[3px] border-primary-black uppercase dark:bg-primary-black">
+            <div className="font-matter bg-custom-background relative z-20 m-1 rounded-4xl border-[3px] border-primary-black uppercase dark:border-grey-100">
                 <ul
                     id="nav-items"
                     data-orientation="horizontal"
@@ -49,7 +49,7 @@ const NavBar = ({ navBarContent }: { navBarContent: ILinkItem[] }): JSX.Element 
                     <div
                         id="animation"
                         style={animationStyle}
-                        className="dark:bg-grey-100 absolute -z-10 rounded-4xl border-2 bg-primary-black opacity-0 transition-all duration-500 ease-in-out focus:opacity-100 group-hover:opacity-100 group-focus:opacity-100"
+                        className="absolute -z-10 rounded-4xl border-2 bg-primary-black opacity-0 transition-all duration-500 ease-in-out focus:opacity-100 group-hover:opacity-100 group-focus:opacity-100 dark:bg-grey-100"
                     />
                     {navBarContent.map((item, index) => (
                         <NavBarItem

@@ -2,11 +2,16 @@
 
 import React, { createContext, useCallback, useEffect, useMemo } from 'react';
 
-const ThemeContext = createContext({ theme: 'dark', toggleTheme: () => {} });
+type ThemeValue = 'dark' | 'light';
+
+const ThemeContext = createContext<{ theme: ThemeValue; toggleTheme: () => void }>({
+    theme: 'dark',
+    toggleTheme: () => {},
+});
 
 export const useTheme = () => React.useContext(ThemeContext);
 
-const useDarkTheme = (defaultTheme = 'dark') => {
+const useDarkTheme = (defaultTheme: ThemeValue = 'dark') => {
     const [theme, setTheme] = React.useState(defaultTheme);
 
     const toggleTheme = useCallback(() => {
