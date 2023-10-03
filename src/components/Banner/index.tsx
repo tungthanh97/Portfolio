@@ -4,10 +4,10 @@ import TechStack from './TechStack';
 
 const Banner = () => {
     return (
-        <section className="h-max w-full lg:h-screen">
+        <section className="h-max min-h-[500px] w-full lg:h-screen">
             <div className="center-row bg-custom-background h-full">
-                <div className="my-[5vh] flex h-max w-full items-center justify-evenly py-32 lg:my-60 lg:h-screen">
-                    <div className="flex h-[60vh] flex-col px-2 lg:max-w-[36vw]">
+                <div className="flex h-max w-full items-center justify-evenly py-32 lg:my-60 lg:h-screen">
+                    <div className="flex h-[70vh] flex-col px-2 py-10 lg:max-w-[36vw]">
                         <div className="center-col flex-grow">
                             <BioDescription />
                         </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import { useRef } from 'react';
 import classNames from '../../utils/classNames';
 
@@ -21,6 +23,7 @@ const ThemeToggle = ({
             onClick={handleChangeTheme}
             className="relative h-8 w-8 cursor-pointer overflow-visible text-2xl lg:text-4xl [&>i]:absolute [&>i]:block [&>i]:h-max [&>i]:w-max [&>i]:transition-all [&>i]:duration-500 [&>i]:ease-in-out"
         >
+            <p className="sr-only">{theme}</p>
             <i
                 className={classNames(
                     'ri-sun-fill rotate-z-0 inset-0 translate-y-0 text-[#ffdb01] opacity-100',
