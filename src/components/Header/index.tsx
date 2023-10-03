@@ -15,11 +15,11 @@ const PageHeader = () => {
     const { toggleTheme, theme } = useTheme();
 
     return (
-        <section className="absolute top-4 z-50 mx-auto flex w-full px-4">
+        <section className="absolute top-4 z-50 mx-auto flex w-full px-4 lg:px-10">
             <div className="flex w-full justify-between px-4 py-6">
                 <div
                     className={classNames(
-                        'relative z-[99999] flex items-center py-1 pl-[5vw] text-custom-primary'
+                        'pl- relative z-[99999] flex items-center py-1 text-custom-primary'
                     )}
                 >
                     <Logo />
@@ -27,18 +27,19 @@ const PageHeader = () => {
 
                 <NavBar navBarContent={navBarContent} />
 
-                <div className={classNames('lg:center-row hidden h-full gap-7')}>
+                <div className="center-row gap-4 md:gap-6 lg:gap-14">
                     <ThemeToggle theme={theme} onClick={() => toggleTheme()} />
-                    <RollingBox />
-                </div>
-
-                {/* mobile menu toggle */}
-                <div className="flex items-center pr-[5vw] lg:hidden">
-                    <MenuToggle
-                        isShown={isMenuOpenned}
-                        toggleMenu={() => setIsMenuOpenned((prev) => !prev)}
-                        navBarContent={navBarContent}
-                    />
+                    <div className={classNames('lg:center-row hidden h-full')}>
+                        <RollingBox />
+                    </div>
+                    {/* mobile menu toggle */}
+                    <div className="mr-2 flex items-center lg:hidden">
+                        <MenuToggle
+                            isShown={isMenuOpenned}
+                            toggleMenu={() => setIsMenuOpenned((prev) => !prev)}
+                            navBarContent={navBarContent}
+                        />
+                    </div>
                 </div>
             </div>
         </section>

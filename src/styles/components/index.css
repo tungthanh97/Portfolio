@@ -5,6 +5,10 @@
         @apply flex flex-row items-center justify-center;
     }
 
+    .center-col {
+        @apply flex flex-col items-center justify-center;
+    }
+
     .header_blend-layer {
         transform: translateZ(0);
     }
@@ -47,6 +51,4 @@
         );
         @apply rounded-lg bg-opacity-60 backdrop-blur-md;
     }
-
-    
 }

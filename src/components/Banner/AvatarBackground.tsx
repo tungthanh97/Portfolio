@@ -20,7 +20,7 @@ const AvatarBackground = ({
             stroke="inherit"
             strokeMiterlimit="50"
             strokeWidth="2"
-            d="M165.648 352.811v0l15.343 16.136v0l15.343-16.136v0l15.341 16.136v0l15.343-16.136v0l15.343 16.136v0l15.343-16.136v0l15.344 16.136v0l15.345-16.136v0"
+            d="M165.648 380.811v0l15.343 16.136v0l15.343-16.136v0l15.341 16.136v0l15.343-16.136v0l15.343 16.136v0l15.343-16.136v0l15.344 16.136v0l15.345-16.136v0"
         ></path>
         <path
             fill="inherit"
@@ -38,11 +38,12 @@ const AvatarBackground = ({
             d="M846.646 332.048v0l22.258.562v0l-.56-22.26v0l22.258.56v0l-.56-22.258v0l22.259.56v0l-.56-22.257v0l22.26.559v0l-.56-22.26v0"
         ></path>
         <path
+            className="hidden lg:block"
             fill="inherit"
             stroke="inherit"
             strokeMiterlimit="50"
             strokeWidth="2"
-            d="M2.114 541.705v0l-.56 22.258v0l22.258-.561v0l-.56 22.259v0l22.258-.56v0l-.56 22.258v0l22.258-.56v0l-.559 22.26v0l22.26-.56v0"
+            d="M100 620.705v0l-.56 22.258v0l22.258-.561v0l-.56 22.259v0l22.258-.56v0l-.56 22.258v0l22.258-.56v0l-.559 22.26v0l22.26-.56v0"
         ></path>
     </svg>
 );

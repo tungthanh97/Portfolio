@@ -21,6 +21,7 @@ const config = {
                     primary: 'rgba(var(--color-primary), <alpha-value>)',
                     secondary: 'rgba(var(--color-secondary), <alpha-value>)',
                     background: 'rgba(var(--color-bkg), <alpha-value>)',
+                    inverted: 'rgba(var(--color-inverted), <alpha-value>)',
                 },
                 grey: {
                     100: '#e5e7eb',
@@ -44,6 +45,14 @@ const config = {
             fontSize: {
                 standard: '22px',
             },
+
+            keyframes: {
+                wiggle: {
+                    '0%': { scale: '100%' },
+                    '50%': { scaleX: '50%', scaleY: '200%' },
+                    '100%': { scaleX: '0%', scaleY: '0' },
+                },
+            },
         },
 
         fontFamily: {
@@ -55,14 +64,6 @@ const config = {
 
         backgroundImage: {
             'gradient-primary': 'linear-gradient(90deg, #4831d4 67%, #ccf381 33%);',
-        },
-
-        keyframes: {
-            wiggle: {
-                '0%': { scale: '100%' },
-                '50%': { scaleX: '50%', scaleY: '200%' },
-                '100%': { scaleX: '0%', scaleY: '0' },
-            },
         },
     },
     plugins: [

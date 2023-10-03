@@ -1,13 +1,20 @@
 import Avatar from './Avatar';
 import BioDescription from './BioDescription';
+import TechStack from './TechStack';
 
 const Banner = () => {
     return (
         <section className="h-max w-full lg:h-screen">
             <div className="center-row bg-custom-background h-full">
-                <div className="my-[15vh] flex h-max w-full items-center justify-evenly py-32 lg:my-60 lg:h-screen">
-                    <BioDescription />
-                    <Avatar wrapperClassName="hidden h-max w-max lg:block" />
+                <div className="my-[5vh] flex h-max w-full items-center justify-evenly py-32 lg:my-60 lg:h-screen">
+                    <div className="flex h-[60vh] flex-col px-2 lg:max-w-[36vw]">
+                        <div className="center-col flex-grow">
+                            <BioDescription />
+                        </div>
+                        <TechStack />
+                    </div>
+
+                    <Avatar wrapperClassName="hidden h-3/4 w-max lg:block pb-12" />
                 </div>
             </div>
             <div className="bg-custom-background flex items-center justify-center p-36 lg:hidden">

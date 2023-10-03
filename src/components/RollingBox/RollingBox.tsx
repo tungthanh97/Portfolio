@@ -2,10 +2,7 @@ import './RollingBox.css';
 
 const RollingBox = ({ onClick }: { onClick?: () => void }) => {
     return (
-        <div
-            onClick={onClick}
-            className="flex min-h-max w-max items-center justify-center pr-[5vw]"
-        >
+        <div onClick={onClick} className="flex min-h-max w-max items-center justify-center pr-2 ">
             <div className="box">
                 <div className="face top">
                     <div className="top-left"></div>

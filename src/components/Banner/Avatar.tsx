@@ -6,8 +6,8 @@ import { TClassName } from '@package/lib/types/components';
 const Avatar = ({ wrapperClassName }: { wrapperClassName: TClassName }) => {
     return (
         <figure className={classNames('relative', wrapperClassName)}>
-            <div className="absolute -right-36 -top-1/4 max-w-max">
-                <AvatarBackground className="fill-custom-primary" />
+            <div className="absolute -right-28 -top-16 z-0 max-w-max">
+                <AvatarBackground className="h-[580px] w-[700px] fill-custom-primary" />
             </div>
             <picture className="relative z-10 block h-96 w-96 border border-primary-black bg-blend-difference dark:border-grey-100 ">
                 <Image
@@ -16,7 +16,7 @@ const Avatar = ({ wrapperClassName }: { wrapperClassName: TClassName }) => {
                     fill={true}
                     priority={false}
                     placeholder="empty"
-                    sizes='width="24rem" height="24rem"'
+                    sizes='width="22rem" height="22rem"'
                     className="absolute !-left-8 !-top-10 items-center object-cover"
                 />
             </picture>

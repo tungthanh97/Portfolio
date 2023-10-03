@@ -19,7 +19,7 @@ const ThemeToggle = ({
     return (
         <div
             onClick={handleChangeTheme}
-            className="relative h-10 w-12 cursor-pointer overflow-visible text-4xl [&>i]:absolute [&>i]:block [&>i]:h-max [&>i]:w-max [&>i]:transition-all [&>i]:duration-500 [&>i]:ease-in-out"
+            className="relative h-8 w-8 cursor-pointer overflow-visible text-2xl lg:text-4xl [&>i]:absolute [&>i]:block [&>i]:h-max [&>i]:w-max [&>i]:transition-all [&>i]:duration-500 [&>i]:ease-in-out"
         >
             <i
                 className={classNames(
