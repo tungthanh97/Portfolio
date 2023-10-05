@@ -21,4 +21,6 @@ const NavBarItem = forwardRef(
     }
 );
 
+NavBarItem.displayName = 'NavBarItem';
+
 export default NavBarItem;

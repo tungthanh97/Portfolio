@@ -5,7 +5,7 @@ interface IMousePosition {
     y: number | null;
 }
 
-const useMousePosition = ({ includeTouch = true }) => {
+const useMousePosition = (includeTouch = true) => {
     const [mousePosition, setMousePosition] = React.useState<IMousePosition>({ x: null, y: null });
 
     React.useEffect(() => {

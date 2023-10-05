@@ -8,7 +8,11 @@ const contactItems = Object.freeze([
     },
     { title: 'github', link: 'https://github.com/tungthanh97', icon: 'github' },
     { title: 'linkedin', link: 'https://www.linkedin.com/in/tungthanh97/', icon: 'linkedin' },
-    { title: 'facebook', link: 'https://www.facebook.com/tungthanh97/', icon: 'facebook' },
+    {
+        title: 'facebook',
+        link: 'https://www.facebook.com/profile.php?id=100014461512183',
+        icon: 'facebook',
+    },
     { title: 'discord', link: 'https://discord.com/users/519417766625804346', icon: 'discord' },
 ]) as ILinkItemWithIcon[];
 

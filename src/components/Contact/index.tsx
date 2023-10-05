@@ -3,14 +3,18 @@
 import classNames from '@package/lib/utils/classNames';
 import contactItems from 'data/constants/contactItems';
 import useScrollDirection from 'hooks/useScrollDirection';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 const Contact = () => {
     const [isScrollUp, setIsScrollUp] = useState(false);
 
+    const handleScrollUp = useCallback(() => setIsScrollUp(true), []);
+
+    const handleScrollDown = useCallback(() => setIsScrollUp(false), []);
+
     useScrollDirection({
-        onScrollUp: () => setIsScrollUp(true),
-        onScrollDown: () => setIsScrollUp(false),
+        onScrollUp: handleScrollUp,
+        onScrollDown: handleScrollDown,
     });
 
     return (

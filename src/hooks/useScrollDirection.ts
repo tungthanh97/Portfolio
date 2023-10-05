@@ -31,7 +31,7 @@ const useScrollDirection = ({ onScrollUp, onScrollDown }: IUseScrollDirection) =
         return () => {
             document.body.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [onScrollUp, onScrollDown]);
 };
 
 export default useScrollDirection;

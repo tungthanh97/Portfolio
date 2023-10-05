@@ -1,8 +1,9 @@
+import BackgroundEffect from '@components/BackgroundEffect';
 import PageHeader from '@components/Header';
+import LoadingOverlay from '@package/lib/components/LoadingOverlay';
 import classNames from '@package/lib/utils/classNames';
 import '@styles/global.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import Providers from 'providers';
 import { Suspense } from 'react';
@@ -37,22 +38,29 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <Providers>
-            <html lang="en">
+        <>
+            <html lang="en" className="dark">
+                <head>
+                    <script src="/script/theme.js" async />
+                </head>
+
                 <body
                     className={classNames(
-                        'bg-primary-white relative dark:bg-primary-black',
+                        'relative bg-primary-white dark:bg-primary-black',
                         bioFont.variable,
                         quantumFont.variable,
                         calFont.variable
                     )}
                 >
-                    <Suspense>
-                        <PageHeader />
-                        {children}
+                    <Suspense fallback={<LoadingOverlay />}>
+                        <Providers>
+                            <PageHeader />
+                            <BackgroundEffect />
+                            {children}
+                        </Providers>
                     </Suspense>
                 </body>
             </html>
-        </Providers>
+        </>
     );
 }

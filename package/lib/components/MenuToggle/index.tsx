@@ -36,7 +36,7 @@ const MenuToggle = ({ navBarContent, isShown, toggleMenu }: IMenuToggle) => {
 
             <div
                 className={classNames(
-                    'bg-custom-background center fixed inset-0 z-0 max-h-full w-full bg-opacity-90 pt-24 backdrop-blur transition-opacity duration-500',
+                    'center fixed inset-0 z-0 max-h-full w-full bg-custom-background bg-opacity-90 pt-24 backdrop-blur transition-opacity duration-500',
                     !isShown && 'max-h-0 w-0 opacity-0'
                 )}
             >
@@ -46,15 +46,18 @@ const MenuToggle = ({ navBarContent, isShown, toggleMenu }: IMenuToggle) => {
                         !isShown && 'max-h-0 opacity-0'
                     )}
                 >
-                    {isShown &&
-                        navBarContent.map((item) => (
-                            <Link
-                                href={item.link}
-                                className="w-full border-b-2 border-dashed border-custom-primary p-4 text-left leading-standard text-custom-primary hover:bg-custom-primary hover:text-custom-secondary hover:opacity-70 md:px-6"
-                            >
-                                {item.title}
-                            </Link>
-                        ))}
+                    {navBarContent.map((item) => (
+                        <Link
+                            key={item.title}
+                            href={item.link}
+                            className={classNames(
+                                'block h-0 w-0 -translate-x-9 overflow-hidden border-b-2 border-dashed border-custom-primary p-4 text-left leading-standard text-custom-primary transition-all duration-500 ease-in-out hover:bg-custom-primary hover:text-custom-secondary hover:opacity-70 md:px-6',
+                                isShown && 'h-full w-full translate-x-0'
+                            )}
+                        >
+                            {item.title}
+                        </Link>
+                    ))}
                 </ul>
             </div>
         </button>
