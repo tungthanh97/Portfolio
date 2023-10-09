@@ -3,7 +3,7 @@ import { ILinkItem } from '@package/lib/types/common';
 export const navBarContent = Object.freeze([
     {
         title: 'About',
-        link: '/',
+        link: '/about',
     },
     {
         title: 'Projects',

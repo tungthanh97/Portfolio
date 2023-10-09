@@ -4,7 +4,7 @@ import NavBar from '@package/lib/components/NavBar';
 import RollingBox from '@components/RollingBox/RollingBox';
 import classNames from '@package/lib/utils/classNames';
 import MenuToggle from '@package/lib/components/MenuToggle';
-import { navBarContent } from 'data/constants/navigationItems';
+import { navBarContent } from 'data/constants/navigationContent';
 import Logo from '@package/lib/components/Logo';
 import { useState } from 'react';
 import { useTheme } from 'providers/ThemeProvider';
