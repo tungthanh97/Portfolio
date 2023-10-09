@@ -13,15 +13,41 @@ export const ExperienceItem = ({
         <div
             key={item.id}
             className={classNames(
-                'mx-6 my-4 flex max-w-screen-max justify-evenly gap-6 p-8 ',
-                isReverse && 'flex-row-reverse'
+                'mx-6 my-4 flex max-w-screen-max gap-2 lg:justify-evenly lg:gap-6 lg:p-8 ',
+                isReverse && 'lg:flex-row-reverse'
             )}
         >
-            <article className="glass flex min-w-[500px] flex-1 flex-col gap-2 rounded-md p-4">
-                <p className="text-2xl font-bold uppercase text-custom-inverted">{item.title}</p>
-                <p className="cursor-help text-base text-custom-primary">{item.company}</p>
+            <div
+                className={classNames(
+                    'mt-2 hidden max-w-[600px] sm:block sm:min-w-[150px] sm:py-4 lg:min-w-[400px] lg:flex-1 lg:p-4 lg:text-right',
+                    isReverse && 'lg:text-left'
+                )}
+            >
+                <p className="text-base text-custom-inverted">{item.date}</p>
+            </div>
+
+            <div className="center-row relative mt-2 h-14 min-w-[50px] text-custom-inverted">
+                <Image
+                    src={`/images/${item.icon}`}
+                    alt={item.icon}
+                    fill={true}
+                    className="relative h-10 w-10"
+                />
+            </div>
+
+            <article
+                className={classNames(
+                    'glass flex max-w-[600px] flex-grow flex-col gap-2 rounded-md px-4 py-6 sm:min-w-[400px] lg:flex-1'
+                    // "before:absolute before:right-0 before:top-4 before:h-6 before:w-6 before:border-8 before:border-cus before:content-['']"
+                )}
+            >
+                <p className="block text-base text-[#777] sm:hidden">{item.date}</p>
+                <p className="whitespace-pre-line text-2xl font-bold uppercase text-custom-inverted">
+                    {item.title}
+                </p>
+                <p className="w-max cursor-alias text-base text-custom-primary">{item.company}</p>
                 <p className="font-sans text-base text-custom-inverted">{item.description}</p>
-                <div className="flex flex-row gap-2 font-sans">
+                <div className="flex flex-row flex-wrap gap-2 font-sans">
                     {item.tags.map((tag) => (
                         <span
                             key={tag}
@@ -32,19 +58,6 @@ export const ExperienceItem = ({
                     ))}
                 </div>
             </article>
-
-            <div className="center-row relative h-14 w-14 text-custom-inverted translate-z-8">
-                <Image
-                    src={`/images/${item.icon}`}
-                    alt={item.icon}
-                    fill={true}
-                    className="relative h-10 w-10"
-                />
-            </div>
-
-            <div className={classNames('min-w-[500px] flex-1 p-4', isReverse && 'text-right')}>
-                <p className="text-base text-custom-inverted">{item.date}</p>
-            </div>
         </div>
     );
 };

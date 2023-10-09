@@ -43,7 +43,7 @@ export const experienceContent: Array<IExperienceItem> = [
     },
     {
         id: '5',
-        title: 'Bachelor of Engineering (Automotive Engineering)',
+        title: 'Bachelor of Engineering \n (Automotive Engineering)',
         company: 'Hanoi University of Science and Technology',
         date: 'Sep 2015 - Jun 2020',
         tags: ['Next.js', 'Docker', 'Tailwind', 'TypeScript', 'GraphQL', 'Apollo'],

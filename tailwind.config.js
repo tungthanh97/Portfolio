@@ -1,5 +1,5 @@
-const { fontFamily } = require('tailwindcss/defaultTheme');
-const plugin = require('tailwindcss/plugin');
+import { fontFamily } from 'tailwindcss/defaultTheme';
+import plugin from 'tailwindcss/plugin';
 
 const config = {
     content: [
@@ -25,11 +25,12 @@ const config = {
                 },
                 grey: {
                     100: '#e5e7eb',
+                    700: '#777777',
                     900: '#1F2124',
                 },
             },
             maxWidth: {
-                'screen-max': '1440px',
+                'screen-max': '1200px',
             },
             breakpoint: {
                 '2xl': '1440px',
