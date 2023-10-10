@@ -38,6 +38,7 @@ const config = {
             },
             borderRadius: {
                 '4xl': '2rem',
+                circle: '50%',
             },
 
             lineHeight: {
