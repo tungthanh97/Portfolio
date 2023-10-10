@@ -25,12 +25,13 @@ const config = {
                 },
                 grey: {
                     100: '#e5e7eb',
+                    200: 'd1d1d1',
                     700: '#777777',
                     900: '#1F2124',
                 },
             },
             maxWidth: {
-                'screen-max': '1200px',
+                'screen-max': '1440px',
             },
             breakpoint: {
                 '2xl': '1440px',
@@ -59,8 +60,10 @@ const config = {
         fontFamily: {
             cal: ['var(--font-cal)', ...fontFamily.serif],
             sans: ['var(--font-bio)', ...fontFamily.sans],
+            inter: ['var(--font-inter)'],
             quantum: ['var(--font-quant)'],
             mono: ['Roboto Mono', 'monospace'],
+            montesat: ['Montserrat-Regular', 'sans-serif'],
         },
 
         backgroundImage: {

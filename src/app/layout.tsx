@@ -7,6 +7,14 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Providers from 'providers';
 import { Suspense } from 'react';
+import { Inter } from 'next/font/google';
+
+// If loading a variable font, you don't need to specify the font weight
+const interFont = Inter({
+    subsets: ['latin'],
+    variable: '--font-inter',
+    display: 'swap',
+});
 
 const bioFont = localFont({
     src: '../../fonts/Biotif.ttf',
@@ -49,7 +57,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         'relative bg-primary-white dark:bg-primary-black',
                         bioFont.variable,
                         quantumFont.variable,
-                        calFont.variable
+                        calFont.variable,
+                        interFont.variable
                     )}
                 >
                     <Suspense fallback={<LoadingOverlay />}>

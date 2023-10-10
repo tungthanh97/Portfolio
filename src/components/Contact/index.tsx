@@ -1,7 +1,7 @@
 'use client';
 
 import classNames from '@package/lib/utils/classNames';
-import contactItems from 'data/constants/contactContent';
+import contactItems from 'data/content/contact';
 import useScrollDirection from 'hooks/useScrollDirection';
 import { useCallback, useState } from 'react';
 

@@ -13,8 +13,7 @@ export const ExperienceItem = ({
         <div
             key={item.id}
             className={classNames(
-                'mx-6 my-4 flex max-w-screen-max gap-2 lg:justify-evenly lg:gap-6 lg:p-8 ',
-                isReverse && 'lg:flex-row-reverse'
+                'mx-6 my-4 flex max-w-screen-max gap-2 lg:justify-evenly lg:gap-6 lg:p-8 even:lg:flex-row-reverse'
             )}
         >
             <div
@@ -26,7 +25,7 @@ export const ExperienceItem = ({
                 <p className="text-base text-custom-inverted">{item.date}</p>
             </div>
 
-            <div className="center-row relative mt-2 h-14 min-w-[50px] text-custom-inverted">
+            <div className="center-row relative z-10 mt-2 h-14 min-w-[50px] text-custom-inverted">
                 <Image
                     src={`/images/${item.icon}`}
                     alt={item.icon}
@@ -45,8 +44,8 @@ export const ExperienceItem = ({
                 <p className="whitespace-pre-line text-2xl font-bold uppercase text-custom-inverted">
                     {item.title}
                 </p>
-                <p className="w-max cursor-alias text-base text-custom-primary">{item.company}</p>
-                <p className="font-sans text-base text-custom-inverted">{item.description}</p>
+                <p className="w-max cursor-help text-base text-custom-primary">{item.company}</p>
+                <p className="content-base">{item.description}</p>
                 <div className="flex flex-row flex-wrap gap-2 font-sans">
                     {item.tags.map((tag) => (
                         <span
