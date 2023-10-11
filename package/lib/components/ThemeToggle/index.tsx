@@ -25,7 +25,7 @@ const ThemeToggle = ({
         >
             <i
                 className={classNames(
-                    'ri-sun-fill inset-0 translate-y-0 text-[#ffdb01] opacity-100 rotate-z-0',
+                    'ri-sun-fill text-primary-light inset-0 translate-y-0 opacity-100 rotate-z-0',
                     isDarkTheme && 'translate-y-10 opacity-0 rotate-z-90'
                 )}
             />

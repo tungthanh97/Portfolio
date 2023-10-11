@@ -16,6 +16,7 @@ const config = {
                     green: '#ccf381',
                     black: '#151417',
                     white: '#ffffff',
+                    light: 'rgba(var(--color-light), <alpha-value>)',
                 },
                 custom: {
                     primary: 'rgba(var(--color-primary), <alpha-value>)',
@@ -55,6 +56,9 @@ const config = {
                     '50%': { scaleX: '50%', scaleY: '200%' },
                     '100%': { scaleX: '0%', scaleY: '0' },
                 },
+            },
+            screens: {
+                ssm: '350px',
             },
         },
 
