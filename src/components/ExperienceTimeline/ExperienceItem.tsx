@@ -18,7 +18,7 @@ export const ExperienceItem = ({
         >
             <div
                 className={classNames(
-                    'hidden max-w-[600px] sm:block sm:min-w-[150px] sm:py-6 lg:min-w-[380px] lg:flex-1 lg:p-6 lg:text-right',
+                    'hidden max-w-[90vw] sm:block sm:min-w-[150px] sm:py-6 lg:min-w-[380px] lg:flex-1 lg:p-6 lg:text-right',
                     isReverse && 'lg:text-left'
                 )}
             >
@@ -36,13 +36,13 @@ export const ExperienceItem = ({
 
             <article
                 className={classNames(
-                    'glass flex max-w-[600px] flex-grow flex-col gap-2 rounded-md p-4 sm:min-w-[380px] lg:flex-1 lg:p-6'
+                    'glass flex max-w-[90vw] flex-grow flex-col gap-2 rounded-md p-4 sm:min-w-[380px] lg:flex-1 lg:p-6 [&>p]:break-words'
                     // "before:absolute before:right-0 before:top-4 before:h-6 before:w-6 before:border-8 before:border-cus before:content-['']"
                 )}
             >
                 <p className="block text-base text-[#777] sm:hidden">{item.date}</p>
                 <p className="whitespace-pre-line text-2xl font-bold uppercase">{item.title}</p>
-                <p className="w-max cursor-help text-base text-custom-primary">{item.company}</p>
+                <p className="cursor-help text-base text-custom-primary">{item.company}</p>
                 <div className="content-base">
                     {item.descriptions.map((description) => (
                         <p className="py-1" key={description}>
