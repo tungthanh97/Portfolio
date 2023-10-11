@@ -13,12 +13,12 @@ const ExperienceTimeline = () => {
                 </p>
             </div>
             <div className="relative my-10">
-                <span className="absolute left-12 top-0 h-full w-0 border border-custom-primary sm:left-52 lg:left-[calc(50%-1px)]" />
+                <span className="ssm:left-12 absolute left-16 top-0 h-full w-0 border border-custom-primary sm:left-52 lg:left-[calc(50%-1px)]" />
                 {experienceContent.map((item, index) => (
                     <ExperienceItem key={item.id} item={item} isReverse={index % 2 === 0} />
                 ))}
 
-                <i className="arrow-down absolute -bottom-4 left-[41px] border-t-custom-primary sm:left-[201px] lg:left-[calc(50%-8px)]"></i>
+                <i className="arrow-down ssm:left-[41px] absolute -bottom-4  left-[33px] border-t-custom-primary sm:left-[201px] lg:left-[calc(50%-8px)]"></i>
             </div>
         </section>
     );

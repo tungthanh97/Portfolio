@@ -1,0 +1,30 @@
+.image-outline {
+  --color: rgb(var(--color-primary)); /* the border color */
+  --border: 3px;   /* the border thickness*/
+  --offset: 20px;   /* control the offset*/
+  --gap: 4px;       /* the gap on hover */
+      
+  /* internal variables */  
+  --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),var(--color) 0;
+  --_o: calc(3*var(--offset));
+  /* */
+  padding: 
+    calc(var(--gap) + var(--border))
+    calc(var(--gap) + var(--border) + var(--offset))
+    calc(var(--gap) + var(--border) + var(--offset))
+    calc(var(--gap) + var(--border));
+  background: 
+    linear-gradient(      var(--_c)) var(--_o) var(--_o), 
+    linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
+  background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+  background-repeat: no-repeat;
+  filter: brightness(1);
+  transition: .5s;
+  cursor: pointer;
+}
+
+.image-outline:hover {
+   background-position: 0px 0px;
+   background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+   filter: brightness(1.2);
+}

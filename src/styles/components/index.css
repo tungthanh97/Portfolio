@@ -63,7 +63,7 @@
     /*** Text ***/
 
     .section-heading {
-        @apply font-inter py-4 text-5xl font-bold uppercase text-custom-inverted;
+        @apply py-4 font-inter text-5xl font-bold uppercase text-custom-inverted;
     }
 
     .section-subheading {
