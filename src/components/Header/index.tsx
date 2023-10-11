@@ -29,8 +29,8 @@ const PageHeader = () => {
 
                 <NavBar navBarContent={navBarContent} />
 
-                <div className="center-row gap-4 md:gap-6 lg:gap-14">
-                    <ThemeToggle theme={theme} onClick={() => toggleTheme()} />
+                <div className="flex w-32 flex-row items-center justify-end gap-4 md:gap-6 lg:gap-14">
+                    <ThemeToggle theme={theme} onClick={() => toggleTheme()} />{' '}
                     <div className={classNames('lg:center-row hidden h-full')}>
                         <RollingBox />
                     </div>

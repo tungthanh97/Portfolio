@@ -28,3 +28,9 @@
    background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
    filter: brightness(1.2);
 }
+
+@media (max-width: 430px) {
+  .image-outline {
+   --offset: 10px;
+  }
+}

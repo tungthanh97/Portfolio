@@ -74,6 +74,12 @@ const config = {
         backgroundImage: {
             'gradient-primary': 'linear-gradient(90deg, #4831d4 67%, #ccf381 33%);',
         },
+
+        boxShadow: {
+            fill: '0 4px 0 rgba(var(--color-inverted), 1)',
+            grow: '0 6px 0 rgba(var(--color-inverted), 1)',
+            shrink: '0 2px 0 rgba(var(--color-inverted), 1)',
+        },
     },
     plugins: [
         plugin(function ({ matchUtilities, theme }) {

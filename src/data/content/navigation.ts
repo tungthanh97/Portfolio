@@ -2,6 +2,10 @@ import { ILinkItem } from '@package/lib/types/common';
 
 export const navBarContent = Object.freeze([
     {
+        title: 'Home',
+        link: '/',
+    },
+    {
         title: 'About',
         link: '/about',
     },
@@ -12,9 +16,5 @@ export const navBarContent = Object.freeze([
     {
         title: 'Blog',
         link: '/#',
-    },
-    {
-        title: 'Resume',
-        link: '/resume',
     },
 ]) as ILinkItem[];

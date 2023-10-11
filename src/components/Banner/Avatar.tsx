@@ -7,20 +7,21 @@ import './index.css';
 const Avatar = ({ wrapperClassName }: { wrapperClassName: TClassName }) => {
     return (
         <div className={classNames('relative', wrapperClassName)}>
-            <div className="absolute -right-28 -top-16 z-0 max-w-max">
-                <AvatarBackground className="h-[580px] w-[700px] fill-custom-primary" />
+            <div className="absolute -right-20 -top-16 z-0 max-w-max sm:-right-28 ">
+                <AvatarBackground className="h-[480px] w-[550px] fill-custom-primary sm:h-[600px] sm:w-[700px]" />
             </div>
-            <picture className="image-outline max-w-screen relative z-10 block h-max w-max dark:border-grey-100">
-                <Image
-                    alt="My avatar"
-                    src="/images/avatar.png"
-                    width={400}
-                    height={400}
-                    priority={false}
-                    placeholder="empty"
-                    className="items-center object-cover"
-                />
-            </picture>
+            <div className="image-outline">
+                <picture className="relative z-10 block h-80 w-80 sm:h-96 sm:w-96">
+                    <Image
+                        alt="My avatar"
+                        src="/images/avatar.png"
+                        fill
+                        priority={false}
+                        placeholder="empty"
+                        className="items-center object-cover"
+                    />
+                </picture>
+            </div>
         </div>
     );
 };

@@ -60,6 +60,12 @@
         @apply m-0 block h-6 w-4 border-x-8 border-t-[16px] border-solid border-x-transparent;
     }
 
+    /*** Wrapper ***/
+
+    .section-wrapper {
+        @apply h-full w-full max-w-screen-max px-4 py-14 sm:p-8 md:p-16;
+    }
+
     /*** Text ***/
 
     .section-heading {
@@ -71,7 +77,7 @@
     }
 
     .content-base {
-        @apply font-montesat text-lg tracking-wide text-custom-inverted/90;
+        @apply font-montesat text-lg tracking-wide text-custom-inverted/80 [&_strong]:text-custom-inverted/100;
     }
 
     .divider {

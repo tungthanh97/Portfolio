@@ -5,5 +5,5 @@ export interface IExperienceItem {
     date: string;
     icon: string;
     tags: string[];
-    description: string;
+    descriptions: string[];
 }

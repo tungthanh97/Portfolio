@@ -3,13 +3,13 @@ import { experienceContent } from 'data/content/experience';
 
 const ExperienceTimeline = () => {
     return (
-        <section className="h-full w-full max-w-screen-max p-16" id="experience-section">
+        <section className="section-wrapper" id="experience-section">
             <div className="center-col lg:p-8">
                 <h1 className="section-heading text-center">Experience</h1>
                 <span className="divider center"></span>
                 <p className="center section-subheading">
-                    I have been working as a software engineer for 3 years. I have experience in
-                    building web applications, mobile applications, and desktop applications.
+                    I have three years of experience in web development, specializing in HTML5,
+                    CSS3, React, and TypeScript.
                 </p>
             </div>
             <div className="relative my-10">
