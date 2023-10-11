@@ -22,10 +22,10 @@ export const ExperienceItem = ({
                     isReverse && 'lg:text-left'
                 )}
             >
-                <p className="text-base text-custom-inverted">{item.date}</p>
+                <p className="text-base">{item.date}</p>
             </div>
 
-            <div className="center-row relative z-10 mt-2 h-14 min-w-[50px] text-custom-inverted">
+            <div className="center-row relative z-10 mt-2 h-14 min-w-[50px]">
                 <Image
                     src={`/images/${item.icon}`}
                     alt={item.icon}
@@ -41,9 +41,7 @@ export const ExperienceItem = ({
                 )}
             >
                 <p className="block text-base text-[#777] sm:hidden">{item.date}</p>
-                <p className="whitespace-pre-line text-2xl font-bold uppercase text-custom-inverted">
-                    {item.title}
-                </p>
+                <p className="whitespace-pre-line text-2xl font-bold uppercase">{item.title}</p>
                 <p className="w-max cursor-help text-base text-custom-primary">{item.company}</p>
                 <p className="content-base">{item.description}</p>
                 <div className="flex flex-row flex-wrap gap-2 font-sans">

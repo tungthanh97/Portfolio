@@ -7,14 +7,14 @@ export const navBarContent = Object.freeze([
     },
     {
         title: 'Projects',
-        link: '/projects',
+        link: '/#',
     },
     {
         title: 'Blog',
-        link: '/blog',
+        link: '/#',
     },
     {
-        title: 'Contact',
-        link: '/contact',
+        title: 'Resume',
+        link: '/resume',
     },
 ]) as ILinkItem[];

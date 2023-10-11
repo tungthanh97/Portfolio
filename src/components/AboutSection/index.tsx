@@ -3,7 +3,7 @@ import Image from 'next/image';
 const About = () => {
     return (
         <section className="w-full max-w-screen-max">
-            <div className="grid w-full grid-cols-12 px-5 text-custom-inverted md:py-10 lg:py-24">
+            <div className="grid w-full grid-cols-12 px-5 md:py-10 lg:py-24">
                 <article className="col-span-12 px-4 md:p-8 lg:col-span-8">
                     <div>
                         <h1 className="section-heading">Hi, I&apos;m Tung</h1>

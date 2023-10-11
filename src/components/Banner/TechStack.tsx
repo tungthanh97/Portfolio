@@ -4,7 +4,7 @@ const techStacksContent = ['html,css', 'js,ts', 'react,next', 'tailwind,styledco
 
 const TechStack = () => {
     return (
-        <article className="text-custom-inverted z-10 flex flex-col items-center lg:items-start">
+        <article className=" z-10 flex flex-col items-center lg:items-start">
             <p className="py-4 leading-7 tracking-wide">TECH STACK</p>
             <ul className="gap flex w-full flex-row flex-wrap items-center justify-center lg:justify-start ">
                 {techStacksContent.map((item) => (

@@ -1,0 +1,65 @@
+.s1 {
+    color: black;
+    font-family: Cambria, serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 10pt;
+}
+.s2 {
+    color: black;
+    font-family: Cambria, serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 24.5pt;
+}
+.p,
+p {
+    color: black;
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 10pt;
+    margin: 0pt;
+}
+.a {
+    color: black;
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 10pt;
+}
+h1 {
+    color: black;
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 10pt;
+}
+.s4 {
+    color: black;
+    font-family: Calibri, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 10pt;
+}
+li {
+    display: block;
+}
+#l1 {
+    padding-left: 0pt;
+}
+#l1 > li > *:first-child:before {
+    content: '• ';
+    color: black;
+    font-family: Calibri, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 10pt;
+}

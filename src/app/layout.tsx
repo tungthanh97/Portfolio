@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                 <body
                     className={classNames(
-                        'relative bg-primary-white dark:bg-primary-black',
+                        'relative bg-primary-white text-custom-inverted dark:bg-primary-black',
                         bioFont.variable,
                         quantumFont.variable,
                         calFont.variable,

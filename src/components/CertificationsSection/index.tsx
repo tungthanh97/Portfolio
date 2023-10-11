@@ -1,5 +1,6 @@
 import certifications from 'data/content/certifications';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const CertificationSection = () => {
     return (
@@ -10,16 +11,13 @@ const CertificationSection = () => {
                 {/* <p className="center section-subheading"></p> */}
                 <div className="flex flex-col gap-4">
                     {certifications.map((item) => (
-                        <div
-                            key={item.name}
-                            className="glass flex flex-row gap-2 p-6 text-custom-inverted"
-                        >
-                            <figure className="center-col mr-4 basis-16">
+                        <div key={item.name} className="glass relative flex flex-row gap-2 p-6 ">
+                            <figure className="center-col mr-4 basis-20">
                                 <Image
                                     src={`/images/${item.logo}`}
                                     alt={item.name}
-                                    width={60}
-                                    height={60}
+                                    width={80}
+                                    height={80}
                                 />
                             </figure>
                             <article className="flex-1">
@@ -31,6 +29,14 @@ const CertificationSection = () => {
                                     Issued {item.issueDate}
                                 </p>
                             </article>
+                            <Link
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="absolute right-3 top-2 block text-3xl"
+                            >
+                                <i className="ri-external-link-line"></i>
+                            </Link>
                         </div>
                     ))}
                 </div>

@@ -63,11 +63,11 @@
     /*** Text ***/
 
     .section-heading {
-        @apply py-4 font-inter text-5xl font-bold uppercase text-custom-inverted;
+        @apply py-4 font-inter text-5xl font-bold uppercase;
     }
 
     .section-subheading {
-        @apply font-sans text-2xl font-bold text-custom-inverted;
+        @apply font-sans text-2xl font-bold;
     }
 
     .content-base {
