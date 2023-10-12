@@ -17,6 +17,7 @@ const Avatar = ({ wrapperClassName }: { wrapperClassName: TClassName }) => {
                         src="/images/avatar.png"
                         fill
                         priority={false}
+                        quality={70}
                         placeholder="empty"
                         className="items-center object-cover"
                     />

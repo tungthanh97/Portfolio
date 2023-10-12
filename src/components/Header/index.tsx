@@ -8,9 +8,8 @@ import { navBarContent } from 'data/content/navigation';
 import Logo from '@package/lib/components/Logo';
 import { useState } from 'react';
 import { useTheme } from 'providers/ThemeProvider';
-import dynamic from 'next/dynamic';
+import ThemeToggle from '@package/lib/components/ThemeToggle';
 
-const ThemeToggle = dynamic(() => import('@package/lib/components/ThemeToggle'), { ssr: false });
 
 const PageHeader = () => {
     const [isMenuOpenned, setIsMenuOpenned] = useState(false);

@@ -15,7 +15,13 @@ const About = () => {
                     <span className="divider"></span>
 
                     <figure className="my-10 h-[280px] w-[280px] overflow-hidden rounded-[50%] lg:hidden">
-                        <Image src="/images/me.png" alt="me" width={280} height={280} />
+                        <Image
+                            src="/images/me.png"
+                            quality={60}
+                            alt="me"
+                            width={280}
+                            height={280}
+                        />
                     </figure>
 
                     <div className="content-base pr-10 [&>p]:pt-2">

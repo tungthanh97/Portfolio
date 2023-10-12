@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <>
             <html lang="en" className="dark">
                 <head>
-                    <script src="/script/theme.js" async />
+                    <script src="/scripts/theme.js" async />
                 </head>
 
                 <body
