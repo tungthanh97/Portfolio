@@ -6,7 +6,7 @@
       
   /* internal variables */  
   --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),var(--color) 0;
-  --_o: calc(3*var(--offset));
+  --_o: calc(2*var(--offset));
   /* */
   padding: 
     calc(var(--gap) + var(--border))
@@ -19,7 +19,8 @@
   background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
   background-repeat: no-repeat;
   filter: brightness(1);
-  transition: .5s;
+  transition: 0.28s;
+
   cursor: pointer;
 }
 

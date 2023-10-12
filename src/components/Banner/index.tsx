@@ -1,4 +1,4 @@
-import Button from '@components/Button';
+import Button from '@package/lib/components/Button';
 import Avatar from './Avatar';
 import BioDescription from './BioDescription';
 import TechStack from './TechStack';
@@ -12,10 +12,12 @@ const Banner = () => {
                         <div className="flex flex-grow flex-col justify-center lg:items-start">
                             <BioDescription />
                             <div>
-                                <Button className="w-max text-lg font-semibold">
-                                    <a href="/documents/CV_TUNGPHAM.pdf" target="_blank">
-                                        My resume
-                                    </a>
+                                <Button
+                                    href="/documents/CV_TUNGPHAM.pdf"
+                                    target="_blank"
+                                    className="w-max text-lg font-semibold"
+                                >
+                                    My resume
                                 </Button>
                             </div>
                         </div>
