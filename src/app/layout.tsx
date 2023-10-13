@@ -13,6 +13,7 @@ import { Inter } from 'next/font/google';
 const interFont = Inter({
     subsets: ['latin'],
     variable: '--font-inter',
+    preload: true,
     display: 'swap',
 });
 
@@ -30,17 +31,10 @@ const calFont = localFont({
     display: 'swap',
 });
 
-const quantumFont = localFont({
-    src: '../../fonts/Quantum_regular.otf',
-    variable: '--font-quant',
-    preload: true,
-    display: 'swap',
-});
-
 export const metadata: Metadata = {
-    title: 'Tom Portfolio',
-    description: 'Portfolio created by Tom',
-    creator: 'Tom',
+    title: 'Tung Pham',
+    description: 'Portfolio created by Tung',
+    creator: 'Tung',
     icons: { icon: '/favicon.ico' },
 };
 
@@ -56,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     className={classNames(
                         'relative bg-primary-white text-custom-inverted dark:bg-primary-black',
                         bioFont.variable,
-                        quantumFont.variable,
+
                         calFont.variable,
                         interFont.variable
                     )}

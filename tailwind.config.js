@@ -66,7 +66,6 @@ const config = {
             cal: ['var(--font-cal)', ...fontFamily.serif],
             sans: ['var(--font-bio)', ...fontFamily.sans],
             inter: ['var(--font-inter)'],
-            quantum: ['var(--font-quant)'],
             mono: ['Roboto Mono', 'monospace'],
             montesat: ['Montserrat-Regular', 'sans-serif'],
         },
