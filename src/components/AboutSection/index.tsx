@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import aboutImage from './aboutImage';
 
 const About = () => {
     return (
@@ -52,7 +53,7 @@ const About = () => {
                 </article>
                 <div className="lg:center-col col-span-4 hidden xl:col-start-9 2xl:col-start-10">
                     <figure className="relative h-[30vw] max-h-[500px] min-h-[380px] w-[26vw] min-w-[320px] max-w-[430px] overflow-hidden rounded-[50%]">
-                        <Image src="/images/me.png" alt="me" fill />
+                        <Image {...aboutImage} alt="me" fill />
                     </figure>
                 </div>
             </div>
