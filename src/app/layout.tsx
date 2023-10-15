@@ -8,7 +8,8 @@ import localFont from 'next/font/local';
 import Providers from 'providers';
 import { Suspense } from 'react';
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
+import GoogleAnalytics from '@components/GoogleAnalytics';
+import { isProd } from 'utils/common';
 
 // If loading a variable font, you don't need to specify the font weight
 const interFont = Inter({
@@ -43,7 +44,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <>
             <html lang="en" className="dark">
-                <Script src="/scripts/theme.js" strategy="afterInteractive" />
+                <head>
+                    <script src="/scripts/theme.js" async />
+                </head>
 
                 <body
                     className={classNames(
@@ -53,6 +56,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         interFont.variable
                     )}
                 >
+                    {isProd && (
+                        <GoogleAnalytics
+                            GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}
+                        />
+                    )}
                     <Suspense fallback={<LoadingOverlay />}>
                         <Providers>
                             <PageHeader />
