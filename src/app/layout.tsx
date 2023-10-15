@@ -8,6 +8,7 @@ import localFont from 'next/font/local';
 import Providers from 'providers';
 import { Suspense } from 'react';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 
 // If loading a variable font, you don't need to specify the font weight
 const interFont = Inter({
@@ -42,15 +43,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <>
             <html lang="en" className="dark">
-                <head>
-                    <script src="/scripts/theme.js" async />
-                </head>
+                <Script src="/scripts/theme.js" strategy="afterInteractive" />
 
                 <body
                     className={classNames(
                         'relative bg-primary-white text-custom-inverted dark:bg-primary-black',
                         bioFont.variable,
-
                         calFont.variable,
                         interFont.variable
                     )}

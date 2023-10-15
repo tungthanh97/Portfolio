@@ -3,22 +3,23 @@
 import { ILinkItem } from '@package/lib/types/common';
 import classNames from '@package/lib/utils/classNames';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export interface IMenuToggle {
     navBarContent: ILinkItem[];
-    isShown: boolean;
-    toggleMenu: () => void;
 }
 
-const MenuToggle = ({ navBarContent, isShown, toggleMenu }: IMenuToggle) => {
+const MenuToggle = ({ navBarContent }: IMenuToggle) => {
+    const [isShown, setIsShown] = useState(false);
+
+    const toggleMenu = () => setIsShown((prev) => !prev);
+
     return (
         <button
             className={classNames(
                 'relative z-50 flex h-5 w-7 lg:hidden [&>span]:bg-custom-primary [&>span]:transition-all'
             )}
-            onClick={() => {
-                toggleMenu();
-            }}
+            onClick={toggleMenu}
         >
             <span
                 className={classNames(

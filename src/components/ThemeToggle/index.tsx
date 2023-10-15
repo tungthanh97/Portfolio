@@ -1,20 +1,16 @@
 'use client';
 
 import { useRef } from 'react';
-import classNames from '../../utils/classNames';
+import classNames from '../../../package/lib/utils/classNames';
+import { useTheme } from 'providers/ThemeProvider';
 
-const ThemeToggle = ({
-    theme = 'dark',
-    onClick,
-}: {
-    theme: 'dark' | 'light';
-    onClick: () => void;
-}) => {
+const ThemeToggle = () => {
+    const { toggleTheme, theme } = useTheme();
     const audioRef = useRef<HTMLAudioElement>(null);
     const isDarkTheme = theme === 'dark';
 
     const handleChangeTheme = () => {
-        onClick();
+        toggleTheme();
         audioRef.current?.play();
     };
 
@@ -25,7 +21,7 @@ const ThemeToggle = ({
         >
             <i
                 className={classNames(
-                    'ri-sun-fill text-primary-light inset-0 translate-y-0 opacity-100 rotate-z-0',
+                    'ri-sun-fill inset-0 translate-y-0 text-primary-light opacity-100 rotate-z-0',
                     isDarkTheme && 'translate-y-10 opacity-0 rotate-z-90'
                 )}
             />
