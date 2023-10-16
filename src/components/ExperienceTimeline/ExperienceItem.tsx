@@ -30,6 +30,7 @@ export const ExperienceItem = ({
                     src={`/images/${item.icon}`}
                     alt={item.icon}
                     fill={true}
+                    sizes="50px"
                     className="relative h-10 w-10"
                 />
             </div>

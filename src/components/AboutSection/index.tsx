@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import aboutImage from './aboutImage';
+import CdnImage from '@components/CdnImage';
 
 const About = () => {
     return (
@@ -15,7 +16,7 @@ const About = () => {
                     </div>
                     <span className="divider"></span>
 
-                    <figure className="my-10 h-[280px] w-[280px] overflow-hidden rounded-[50%] lg:hidden">
+                    <figure className="my-10 h-[300px] max-h-[90vw] w-[280px] max-w-[90vw] overflow-hidden rounded-[50%] lg:hidden">
                         <Image
                             src="/images/me.png"
                             quality={60}
@@ -25,7 +26,7 @@ const About = () => {
                         />
                     </figure>
 
-                    <div className="content-base pr-10 [&>p]:pt-2">
+                    <div className="content-base text-left lg:pr-10 [&>p]:pt-2">
                         <p>
                             I have experience <strong>developing software for the web</strong>,
                             ranging from basic <strong>landing pages</strong> to advanced
@@ -52,8 +53,8 @@ const About = () => {
                     </div>
                 </article>
                 <div className="lg:center-col col-span-4 hidden xl:col-start-9 2xl:col-start-10">
-                    <figure className="relative h-[30vw] max-h-[500px] min-h-[380px] w-[26vw] min-w-[320px] max-w-[430px] overflow-hidden rounded-[50%]">
-                        <Image {...aboutImage} alt="me" fill />
+                    <figure className="relative h-[clamp(380px,30vw,500px)] w-[clamp(320px,26vw,430px)] overflow-hidden rounded-[50%]">
+                        <CdnImage {...aboutImage} alt="me" fill />
                     </figure>
                 </div>
             </div>

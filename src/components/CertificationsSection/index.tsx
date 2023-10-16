@@ -1,7 +1,7 @@
 import certifications from 'data/content/certifications';
-import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLink from '@assets/icons/external-link-line.svg';
+import CdnImage from '@components/CdnImage';
 
 const CertificationSection = () => {
     return (
@@ -14,12 +14,7 @@ const CertificationSection = () => {
                     {certifications.map((item) => (
                         <div key={item.name} className="glass relative flex flex-row gap-2 p-6 ">
                             <figure className="center-col mr-4 basis-20">
-                                <Image
-                                    src={`/images/${item.logo}`}
-                                    alt={item.name}
-                                    width={80}
-                                    height={80}
-                                />
+                                <CdnImage src={item.logo} alt={item.name} width={80} height={80} />
                             </figure>
                             <article className="flex-1">
                                 <h2 className="pr-6 text-2xl font-bold">{item.name}</h2>
