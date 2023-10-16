@@ -1,7 +1,6 @@
 @import './base/base.css';
 @import './utilities/utilities.css';
 @import './components/index.css';
-@import 'remixicon/fonts/remixicon.css';
 
 * {
     box-sizing: border-box;

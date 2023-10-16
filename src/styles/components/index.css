@@ -50,7 +50,7 @@
     .glass {
         background: linear-gradient(
             360deg,
-            rgba(var(--color-inverted), 0.1),
+            rgba(var(--color-inverted), 0.15),
             rgba(var(--color-inverted), 0)
         );
         @apply rounded-lg bg-opacity-60 backdrop-blur-md;

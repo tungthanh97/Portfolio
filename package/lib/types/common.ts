@@ -4,5 +4,5 @@ export interface ILinkItem {
 }
 
 export interface ILinkItemWithIcon extends ILinkItem {
-    icon: string;
+    icon: React.ReactNode;
 }

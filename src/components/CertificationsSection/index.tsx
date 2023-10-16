@@ -1,6 +1,7 @@
 import certifications from 'data/content/certifications';
 import Image from 'next/image';
 import Link from 'next/link';
+import ExternalLink from '@assets/icons/external-link-line.svg';
 
 const CertificationSection = () => {
     return (
@@ -8,7 +9,7 @@ const CertificationSection = () => {
             <div className="center-col lg:p-8">
                 <h1 className="section-heading text-center">Certification</h1>
                 <span className="divider center"></span>
-                {/* <p className="center section-subheading"></p> */}
+
                 <div className="flex flex-col gap-6 lg:px-6">
                     {certifications.map((item) => (
                         <div key={item.name} className="glass relative flex flex-row gap-2 p-6 ">
@@ -33,9 +34,9 @@ const CertificationSection = () => {
                                 href={item.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="absolute right-3 top-2 block text-2xl text-custom-primary lg:text-3xl"
+                                className="absolute right-3 top-2"
                             >
-                                <i className="ri-external-link-line"></i>
+                                <ExternalLink className="h-6 w-6 fill-custom-primary lg:h-8 lg:w-8" />
                             </Link>
                         </div>
                     ))}
