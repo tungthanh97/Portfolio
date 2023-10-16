@@ -11,16 +11,6 @@
         --color-light: 255, 219, 1;
     }
 
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --color-primary: 204, 243, 129;
-            --color-secondary: 72, 49, 212;
-            --color-primary-hs: 81, 83%;
-
-            --color-bkg: 21, 20, 23;
-            --color-inverted: 255, 255, 255;
-        }
-    }
 
     :root[class='dark'] {
         --color-primary: 204, 243, 129;
@@ -30,6 +20,4 @@
         --color-bkg: 21, 20, 23;
         --color-inverted: 255, 255, 255;
     }
-
-   
 }
