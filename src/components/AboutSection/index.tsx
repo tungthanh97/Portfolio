@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import aboutImage from './aboutImage';
 import CdnImage from '@components/CdnImage';
 
@@ -17,13 +16,7 @@ const About = () => {
                     <span className="divider"></span>
 
                     <figure className="my-10 h-[300px] max-h-[90vw] w-[280px] max-w-[90vw] overflow-hidden rounded-[50%] lg:hidden">
-                        <Image
-                            src="/images/me.png"
-                            quality={60}
-                            alt="me"
-                            width={280}
-                            height={280}
-                        />
+                        <CdnImage {...aboutImage} quality={60} alt="me" width={280} height={280} />
                     </figure>
 
                     <div className="content-base text-left lg:pr-10 [&>p]:pt-2">

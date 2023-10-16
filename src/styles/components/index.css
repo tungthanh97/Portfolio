@@ -50,14 +50,22 @@
     .glass {
         background: linear-gradient(
             360deg,
-            rgba(var(--color-inverted), 0.15),
+            rgba(var(--color-inverted), 0.1),
             rgba(var(--color-inverted), 0)
         );
         @apply rounded-lg bg-opacity-60 backdrop-blur-md;
     }
 
+    .arrow {
+        @apply m-0 block h-6 w-4  border-solid border-x-transparent;
+    }
+
     .arrow-down {
-        @apply m-0 block h-6 w-4 border-x-8 border-t-[16px] border-solid border-x-transparent;
+        @apply arrow border-x-8 border-t-[16px];
+    }
+
+    .arrow-up {
+        @apply arrow border-x-8 border-b-[16px];
     }
 
     /*** Wrapper ***/
@@ -83,6 +91,4 @@
     .divider {
         @apply my-8 block h-[2px] w-24 bg-custom-primary;
     }
-
-
 }

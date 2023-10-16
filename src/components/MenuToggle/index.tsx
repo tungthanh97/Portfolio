@@ -37,14 +37,14 @@ const MenuToggle = ({ navBarContent }: IMenuToggle) => {
 
             <div
                 className={classNames(
-                    'center fixed inset-0 z-0 max-h-full w-full bg-custom-background bg-opacity-90 pt-24 backdrop-blur transition-opacity duration-500',
-                    !isShown && 'max-h-0 w-0 opacity-0'
+                    'center fixed inset-0 z-0 max-h-full w-full bg-custom-background bg-opacity-90 pt-24 backdrop-blur transition-all duration-500',
+                    !isShown && 'max-h-0 w-0 opacity-0 delay-300'
                 )}
             >
                 <ul
                     className={classNames(
-                        'text-primary blue auto-flow-y-auto flex max-h-full w-full flex-col items-start border-t-2 border-custom-primary text-standard font-bold opacity-100',
-                        !isShown && 'max-h-0 opacity-0'
+                        'text-primary blue auto-flow-y-auto flex max-h-full w-full flex-col items-start border-t-2 border-custom-primary text-standard font-bold opacity-100 transition-all',
+                        !isShown && 'max-h-0 opacity-0 delay-300'
                     )}
                 >
                     {navBarContent.map((item) => (

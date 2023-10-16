@@ -6,9 +6,9 @@ const TechStack = () => {
     return (
         <article className=" z-10 flex flex-col items-center lg:items-start">
             <p className="py-4 leading-7 tracking-wide">TECH STACK</p>
-            <ul className="gap flex w-full flex-row flex-wrap items-center justify-center lg:justify-start ">
+            <ul className="flex w-full flex-row flex-wrap items-center justify-center gap-6 lg:justify-start ">
                 {techStacksContent.map((item) => (
-                    <li key={item} className="group mb-4 mr-6 cursor-pointer">
+                    <li key={item} className="group cursor-pointer">
                         <Image
                             src={`https://skillicons.dev/icons?i=${item}`}
                             alt={item}

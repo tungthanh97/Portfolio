@@ -28,7 +28,7 @@ const Banner = () => {
                     <Avatar wrapperClassName="hidden h-3/4 w-max lg:block pb-12 py-10" />
                 </div>
             </div>
-            <div className="flex items-center justify-center bg-custom-background p-[15vw] sm:p-36 lg:hidden ">
+            <div className="flex items-center justify-center bg-custom-background pb-[15vh] pt-10 sm:p-36 lg:hidden ">
                 <Avatar wrapperClassName="min-h-max w-max" />
             </div>
         </section>
