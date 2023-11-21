@@ -33,7 +33,7 @@ const Contact = () => {
                         className="group flex h-max flex-row items-center justify-start font-sans text-lg text-custom-primary filter hover:brightness-110"
                     >
                         <span className="hidden leading-3 lg:inline-block">{item.title}</span>
-                        <figure className="ml-[5px] inline-block  transition-opacity duration-200 ease-in-out lg:opacity-0 lg:group-hover:opacity-100 [&>svg]:w-[15px] [&>svg]:fill-custom-primary">
+                        <figure className="ml-[5px] inline-block  transition-opacity duration-200 ease-in-out lg:opacity-0 lg:group-hover:opacity-100 [&>svg]:w-6 [&>svg]:fill-custom-primary [&>svg]:lg:w-4">
                             {item.icon}
                         </figure>
                     </Link>

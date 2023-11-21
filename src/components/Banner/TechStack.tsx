@@ -1,6 +1,12 @@
 import Image from 'next/image';
 
-const techStacksContent = ['html,css', 'js,ts', 'react,next', 'tailwind,styledcomponents'];
+const techStacksContent = [
+    'html,css',
+    'js,ts',
+    'react,next',
+    'tailwind,styledcomponents',
+    'nodejs,nestjs',
+];
 
 const TechStack = () => {
     return (

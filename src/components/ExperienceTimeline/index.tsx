@@ -8,8 +8,8 @@ const ExperienceTimeline = () => {
                 <h1 className="section-heading text-center">Experience</h1>
                 <span className="divider center"></span>
                 <p className="center section-subheading">
-                    I have three years of experience in web development, specializing in HTML5,
-                    CSS3, React, and TypeScript.
+                    I have five years of experience in web development, specializing in HTML5, CSS3,
+                    React, Node.js and TypeScript.
                 </p>
             </div>
             <div className="relative my-10 pt-1">
