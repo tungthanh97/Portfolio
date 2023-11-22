@@ -1,3 +1,5 @@
+'use client';
+
 import NavBar from '@package/lib/components/NavBar';
 import RollingBox from '@components/RollingBox/RollingBox';
 import classNames from '@package/lib/utils/classNames';
@@ -5,10 +7,14 @@ import { navBarContent } from 'data/content/navigation';
 import Logo from '@package/lib/components/Logo';
 import MenuToggle from '@components/MenuToggle';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import { useSelector } from 'react-redux';
 
 const ThemeToggle = dynamic(() => import('@components/ThemeToggle'), { ssr: false });
 
 const PageHeader = () => {
+    const userState = useSelector((state: any) => state.user);
+
     return (
         <section className="absolute top-4 z-20 mx-auto flex w-full px-4 lg:px-10">
             <div className="grid w-full grid-cols-2 grid-rows-1 px-4 py-6 lg:grid-cols-3">
@@ -28,9 +34,12 @@ const PageHeader = () => {
 
                 <div className="flex flex-row items-center justify-end gap-4 md:gap-6 lg:gap-14">
                     <ThemeToggle />
-                    <div className={classNames('lg:center-row hidden h-full')}>
+                    <Link
+                        href={userState?.userInfo ? '/profile' : '/login'}
+                        className={classNames('lg:center-row hidden h-full')}
+                    >
                         <RollingBox />
-                    </div>
+                    </Link>
                     {/* mobile menu toggle */}
                     <div className="mr-2 flex items-center lg:hidden">
                         <MenuToggle navBarContent={navBarContent} />

@@ -91,4 +91,8 @@
     .divider {
         @apply my-8 block h-[2px] w-24 bg-custom-primary;
     }
+
+    .container {
+        @apply w-full;
+    }
 }

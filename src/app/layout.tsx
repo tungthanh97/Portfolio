@@ -10,6 +10,7 @@ import { Suspense } from 'react';
 import { Inter } from 'next/font/google';
 import GoogleAnalytics from '@components/GoogleAnalytics';
 import { isProd } from 'utils/common';
+import { Toaster } from 'react-hot-toast';
 
 // If loading a variable font, you don't need to specify the font weight
 const interFont = Inter({
@@ -42,34 +43,31 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <>
-            <html lang="en" className="dark">
-                <head>
-                    <script src="/scripts/theme.js" async />
-                </head>
+        <html lang="en" className="dark">
+            <head>
+                <script src="/scripts/theme.js" async />
+            </head>
 
-                <body
-                    className={classNames(
-                        'relative bg-primary-white text-custom-inverted dark:bg-primary-black',
-                        bioFont.variable,
-                        calFont.variable,
-                        interFont.variable
-                    )}
-                >
-                    {isProd && (
-                        <GoogleAnalytics
-                            GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}
-                        />
-                    )}
-                    <Suspense fallback={<LoadingOverlay />}>
-                        <Providers>
-                            <PageHeader />
-                            <BackgroundEffect />
-                            {children}
-                        </Providers>
-                    </Suspense>
-                </body>
-            </html>
-        </>
+            <body
+                className={classNames(
+                    'relative bg-primary-white text-custom-inverted dark:bg-primary-black',
+                    bioFont.variable,
+                    calFont.variable,
+                    interFont.variable
+                )}
+            >
+                {isProd && (
+                    <GoogleAnalytics GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
+                )}
+                <Suspense fallback={<LoadingOverlay />}>
+                    <Providers>
+                        <PageHeader />
+                        <BackgroundEffect />
+                        {children}
+                        <Toaster />
+                    </Providers>
+                </Suspense>
+            </body>
+        </html>
     );
 }
