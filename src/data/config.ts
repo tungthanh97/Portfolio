@@ -1,3 +1,3 @@
-const SERVER_DOMAIN = process.env.NEXT_PUBLIC_SERVER_DOMAIN;
+const SERVER_DOMAIN = 'https://blog-nodejs-jet.vercel.app/v1/';
 
 export { SERVER_DOMAIN };
