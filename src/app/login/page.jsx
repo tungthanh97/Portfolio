@@ -11,6 +11,8 @@ import Link from 'next/link';
 import { login } from '@services/users';
 import Button from '../../../package/lib/components/Button';
 import MainLayout from '../../components/MainLayout/MainLayout';
+import { KEY_AUTH_TOKEN } from 'constants/common';
+import { setLocalStorage } from 'utils/localStorage';
 
 function LoginPage() {
     const router = useRouter();
@@ -24,9 +26,8 @@ function LoginPage() {
         onSuccess: (data) => {
             if (data && data?.status !== 'error') {
                 toast.success('Login successfull');
-                console.log(data?.metadata?.user);
                 dispatch(userActions.setUserInfo(data?.metadata?.user));
-                localStorage.setItem('account', JSON.stringify(data));
+                setLocalStorage(KEY_AUTH_TOKEN, JSON.stringify(data.metadata));
             } else toast.error('Something when wrong');
         },
         onError: (error) => {
@@ -61,6 +62,7 @@ function LoginPage() {
         const { email, password } = data;
         mutate({ email, password });
     };
+
     return (
         <MainLayout>
             <section className="container mx-auto px-5 py-10">

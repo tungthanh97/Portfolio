@@ -15,6 +15,6 @@ export const navBarContent = Object.freeze([
     },
     {
         title: 'Blog',
-        link: '/#',
+        link: '/blog',
     },
 ]) as ILinkItem[];

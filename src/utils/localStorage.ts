@@ -10,4 +10,10 @@ const getLocalStorage = (key: string) => {
     }
 };
 
-export { setLocalStorage, getLocalStorage };
+const removeLocalStorage = (key: string) => {
+    if (typeof window !== 'undefined') {
+        return localStorage.removeItem(key);
+    }
+};
+
+export { setLocalStorage, getLocalStorage, removeLocalStorage };

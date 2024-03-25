@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { IUser } from 'types/auth.type';
 
-const userInitialState = { userInfo: null };
+const userInitialState: { userInfo: IUser | null } = { userInfo: null };
 
 const userSlice = createSlice({
     name: 'user',

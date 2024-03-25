@@ -11,7 +11,7 @@ export const signUp = async ({
     password: string;
 }) => {
     try {
-        const { data } = await axios.post(`${SERVER_DOMAIN}api/user/signup`, {
+        const { data } = await axios.post(`${SERVER_DOMAIN}/user/signup`, {
             name,
             email,
             password,
@@ -25,7 +25,7 @@ export const signUp = async ({
 
 export const login = async ({ email, password }: { email: string; password: string }) => {
     try {
-        const { data } = await axios.post(`${SERVER_DOMAIN}api/user/login`, {
+        const { data } = await axios.post(`${SERVER_DOMAIN}/user/login`, {
             email,
             password,
         });
@@ -38,7 +38,7 @@ export const login = async ({ email, password }: { email: string; password: stri
 
 export const logout = async () => {
     try {
-        const { data } = await axios.post(`${SERVER_DOMAIN}api/user/logout`);
+        const { data } = await axios.post(`${SERVER_DOMAIN}/user/logout`);
 
         return data;
     } catch (error) {
