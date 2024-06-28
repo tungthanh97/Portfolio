@@ -19,15 +19,12 @@ jobs:
       - name: Log in to Docker Registry
         run:  docker login ${{ secrets.DOCKER_REGISTRY }} -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and Push Docker Image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: |
-            tungthanh97/portfolio-fe:latest
-            ${{ secrets.DOCKER_REGISTRY }}/portfolio-fe:latest
+      - name: Build Docker image
+        run: docker build -t registry.tungpham.bio/portfolio-fe:latest .
 
+      - name: Push Docker image
+        run: docker push registry.tungpham.bio/portfolio-fe:latest
+        
   deploy:
     runs-on: ubuntu-latest
     needs: build
