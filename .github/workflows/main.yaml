@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Echo secrets safely
         run: |
-          echo ${{ secrets.DOCKER_USERNAME }}
-          echo ${{ secrets.DOCKER_PASSWORD }}
-          echo ${{ secrets.DOCKER_REGISTRY }}
+          echo "DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}"
+          echo "DOCKER_PASSWORD=${{ secrets.DOCKER_PASSWORD }}"
+          echo "DOCKER_REGISTRY=${{ secrets.DOCKER_REGISTRY }}"
       - name: Checkout repository
         uses: actions/checkout@v2
 
