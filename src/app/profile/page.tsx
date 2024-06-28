@@ -1,41 +1,32 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import MainLayout from '@components/MainLayout';
-import { useRouter } from 'next/navigation';
-import { logout } from '@store/actions/userActions';
 import Button from '../../../package/lib/components/Button';
 import { useMutation } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
+import UserRepository from '@services/user.repository';
+import { userActions } from '@store/reducers/userReducer';
+import { RootState } from '@store/index';
 
 function ProfilePage() {
-    const router = useRouter();
     const dispatch = useDispatch();
-    const userState = useSelector((state) => state.user);
+    const userState = useSelector((state: RootState) => state.user);
 
     const { mutate } = useMutation({
-        mutationFn: ({ email, password }) => {
-            return logout({ email, password });
+        mutationFn: () => {
+            return UserRepository.logout();
         },
         onSuccess: () => {
             toast.success('Logout successfull');
         },
     });
 
-    console.log('user state', userState);
-
     const logoutHandler = () => {
-        dispatch(logout());
+        dispatch(userActions.resetUserInfo());
         mutate();
     };
-
-    //if user is logged in, then redirect to the home page
-    useEffect(() => {
-        if (!userState.userInfo) {
-            router.push('/');
-        }
-    }, [router, userState.userInfo]);
 
     return (
         <MainLayout>

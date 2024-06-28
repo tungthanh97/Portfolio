@@ -9,7 +9,7 @@ import Providers from 'providers';
 import { Suspense } from 'react';
 import { Inter } from 'next/font/google';
 import GoogleAnalytics from '@components/GoogleAnalytics';
-import { isProd } from 'utils/common';
+import { isProd } from 'utils/mixed';
 import { Toaster } from 'react-hot-toast';
 
 // If loading a variable font, you don't need to specify the font weight
