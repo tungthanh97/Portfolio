@@ -24,7 +24,7 @@ jobs:
 
       - name: Push Docker image
         run: docker push registry.tungpham.bio/portfolio-fe:latest
-        
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            docker pull {{ secrets.DOCKER_HOST }}/portfolio-fe:latest
+            docker pull ${{ secrets.DOCKER_HOST }}/portfolio-fe:latest
             docker stop portfolio-fe || true
             docker rm portfolio-fe || true
             docker run -d --name portfolio-fe -p 3000:3000 ${{ secrets.DOCKER_HOST }}/portfolio-fe:latest
