@@ -30,15 +30,12 @@ jobs:
     # needs: build
 
     steps:
-      - name: Print password
-        run: echo '${{ secrets.SSH_PASSWORD }}' | sed 's/./& /g'
-
       - name: Deploy to Server via SSH
         uses: appleboy/ssh-action@v0.1.9
         with:
           host: 103.72.97.254
           username: root
-          password: '${{ secrets.SSH_PASSWORD }}'
+          password: ${{ secrets.SSH_PASSWORD }}
           port: 24700
           script: |
             # docker pull ${{ secrets.DOCKER_HOST }}/portfolio-fe:latest
