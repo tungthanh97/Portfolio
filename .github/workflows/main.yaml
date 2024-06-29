@@ -6,24 +6,24 @@ on:
       - main
 
 jobs:
-  # build:
-  #   runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-    # steps:
-    #   - name: Checkout repository
-    #     uses: actions/checkout@v2
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    #   - name: Set up Docker Buildx
-    #     uses: docker/setup-buildx-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
 
-    #   - name: Log in to Docker Registry
-    #     run:  docker login ${{ secrets.DOCKER_REGISTRY }} -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: Log in to Docker Registry
+        run:  docker login ${{ secrets.DOCKER_REGISTRY }} -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
-    #   - name: Build Docker image
-    #     run: docker build -t registry.tungpham.bio/portfolio-fe:latest .
+      - name: Build Docker image
+        run: docker build -t registry.tungpham.bio/portfolio-fe:latest .
 
-    #   - name: Push Docker image
-    #     run: docker push registry.tungpham.bio/portfolio-fe:latest
+      - name: Push Docker image
+        run: docker push registry.tungpham.bio/portfolio-fe:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -33,10 +33,10 @@ jobs:
       - name: Deploy to Server via SSH
         uses: appleboy/ssh-action@v0.1.9
         with:
-          host: 103.72.97.77
-          username: root
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
-          port: 24700
+          port: ${{ secrets.SSH_PORT }}
           script: |
             docker pull ${{ secrets.DOCKER_HOST }}/portfolio-fe:latest
             docker stop portfolio-fe || true
