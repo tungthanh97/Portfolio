@@ -33,10 +33,10 @@ jobs:
       - name: Deploy to Server via SSH
         uses: appleboy/ssh-action@v0.1.9
         with:
-          host: 103.72.97.77
-          username: root
-          password: Z6fV@25wrro*
-          port: 24700
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT }}
           script: |
             # docker pull ${{ secrets.DOCKER_HOST }}/portfolio-fe:latest
             # docker stop portfolio-fe || true
