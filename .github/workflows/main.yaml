@@ -30,6 +30,9 @@ jobs:
     # needs: build
 
     steps:
+      - name: Print password
+        run: echo '${{ secrets.SSH_PASSWORD }}'
+        
       - name: Deploy to Server via SSH
         uses: appleboy/ssh-action@v0.1.9
         with:
