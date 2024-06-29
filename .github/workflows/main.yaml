@@ -30,17 +30,15 @@ jobs:
     # needs: build
 
     steps:
-      - name: Test
-        run: ssh -p 24700 root@103.72.97.77
-      # - name: Deploy to Server via SSH
-      #   uses: appleboy/ssh-action@v0.1.9
-      #   with:
-      #     host: ${{ secrets.SSH_HOST }}
-      #     username: ${{ secrets.SSH_USERNAME }}
-      #     password: ${{ secrets.SSH_PASSWORD }}
-      #     port: ${{ secrets.SSH_PORT }}
-      #     script: |
-      #       # docker pull ${{ secrets.DOCKER_HOST }}/portfolio-fe:latest
-      #       # docker stop portfolio-fe || true
-      #       # docker rm portfolio-fe || true
-      #       # docker run -d --name portfolio-fe -p 3000:3000 ${{ secrets.DOCKER_HOST }}/portfolio-fe:latest
+      - name: Deploy to Server via SSH
+        uses: appleboy/ssh-action@v0.1.9
+        with:
+          host: 103.72.97.77
+          username: root
+          password: Z6fV@25wrro*
+          port: 24700
+          script: |
+            # docker pull ${{ secrets.DOCKER_HOST }}/portfolio-fe:latest
+            # docker stop portfolio-fe || true
+            # docker rm portfolio-fe || true
+            # docker run -d --name portfolio-fe -p 3000:3000 ${{ secrets.DOCKER_HOST }}/portfolio-fe:latest
