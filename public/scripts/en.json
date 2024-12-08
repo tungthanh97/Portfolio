@@ -1,0 +1,25 @@
+{
+    "paper-clip-attach-btn-tooltip": "Upload files directly into the prompt of this conversation. Supported file types are: PDF, DOCX, TXT, JSON, CSV. Maximum upload file size: 10 MB.",
+    "reset-all-btn-tooltip-conversation": "Delete all messages in this conversation.",
+    "reset-all-btn-tooltip-dataroom": "Delete all messages in this data room.",
+    "enable-auto-response-tooltip": "Agent Response DISABLED",
+    "disable-auto-response-tooltip": "Agent Response ENABLED",
+    "audio-input-tooltip": "Start audio command",
+    "rewind-message-button": "Rewind message",
+    "rewind-message-confirm-title": "Rewind message",
+    "rewind-message-confirm-text-nexus": "Are you sure you want to rewind back to this part of the Data Room? All following interactions and pinned message will be deleted and can not be restored.",
+    "rewind-message-confirm-text-retriever": "Are you sure you want to rewind back to this part of the Conversation? All following interactions and pinned message will be deleted and can not be restored.",
+    "rewind-message-success-nexus": "Data Room rewound. All subsequent interactions have been deleted.",
+    "rewind-message-success-retriever": "Conversation rewound. All subsequent interactions have been deleted.",
+    "rewind-message-tooltip-nexus": "Rewind this part of the Data Room",
+    "rewind-message-tooltip-retriever": "Rewind this part of the Conversation",
+    "rewind-message-confirm-button": "Yes, rewind back here.",
+    "copy-plaintooltip": "Copy without any formatting.",
+    "copy-htmltooltip": "Copy as <strong>Rich Text</strong> for Word, Email, Google Tools, Clickup, Medium, Notion, etc.",
+    "copy-markdowntooltip": "Copy as <strong>Markdown</strong> for Discord, GitHub, Stack Overflow, Jira, Notion, etc.",
+    "prompt-preview": {
+        "title": "Prompt Preview",
+        "show-more": "show more",
+        "show-less": "show less"
+    }
+}

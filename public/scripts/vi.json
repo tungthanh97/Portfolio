@@ -1,0 +1,11 @@
+{
+    "disable-auto-response-tooltip": "Phản hồi của Đại lý ĐÃ ĐƯỢC KÍCH HOẠT",
+    "reset-all-btn-tooltip-conversation": "Xóa tất cả tin nhắn trong cuộc trò chuyện này.",
+    "reset-all-btn-tooltip-dataroom": "Xóa tất cả tin nhắn trong phòng dữ liệu này.",
+    "enable-auto-response-tooltip": "Phản hồi của Đại lý ĐÃ BỊ VÔ HIỆU HÓA",
+    "audio-input-tooltip": "Bắt đầu lệnh âm thanh",
+    "rewind-message-button": "Quay lại tin nhắn",
+    "rewind-message-confirm-title": "Quay lại tin nhắn",
+    "paper-clip-attach-btn-tooltip": "Tải tệp trực tiếp vào dòng lệnh của cuộc trò chuyện này. Các loại tệp được hỗ trợ là: PDF, DOCX, TXT, JSON, CSV. Kích thước tệp tải lên tối đa: 10 MB.",
+    "rewind-message-confirm-text-nexus": "Bạn có chắc chắn muốn quay lại phần này của Phòng dữ liệu không? Tất cả các tương tác tiếp theo và tin nhắn được ghim sẽ bị xóa và không thể khôi phục."
+}
